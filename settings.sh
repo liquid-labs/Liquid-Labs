@@ -1,3 +1,4 @@
+ORG_URL='https://github.com/Liquid-Labs'
 ORG_COMMON_NAME='Liquid Labs'
 ORG_GITHUB_NAME='Liquid-Labs'
 ORG_LEGAL_NAME='Liquid Labs, LLC'
