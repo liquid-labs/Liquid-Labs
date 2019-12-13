@@ -5,3 +5,5 @@ ORG_ADDRESS='907 Isle of Man Ct
 Pflugerville, TX 78660'
 ORG_NAICS='1'
 ORG_NICK_NAME='liquid_labs'
+ORG_NPM_SCOPE='liquid-labs'
+ORG_NPM_REGISTRY='https://registry.npmjs.org/'
