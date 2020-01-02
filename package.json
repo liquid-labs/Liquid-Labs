@@ -19,5 +19,10 @@
     "@liquid-labs/policy-core": "^1.0.0-alpha.1",
     "@liquid-labs/policy-devops": "^1.0.0-alpha.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "liquidDev": {
+    "changeControl": {
+      "type": "org"
+    }
+  }
 }
