@@ -16,10 +16,12 @@
   },
   "homepage": "https://github.com/Liquid-Labs/org_settings#readme",
   "optionalDependencies": {
-    "@liquid-labs/policy-core": "^1.0.0-alpha.1",
-    "@liquid-labs/policy-devops": "^1.0.0-alpha.1"
+    "@liquid-labs/policy-core": "^1.0.0-alpha.3",
+    "@liquid-labs/policy-devops": "^1.0.0-alpha.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@liquid-labs/policy-devops": "file:.yalc/@liquid-labs/policy-devops"
+  },
   "liquidDev": {
     "changeControl": {
       "type": "org"
