@@ -1,0 +1,5 @@
+Statement	Reviewer	Affirmed	Comments
+Physical components of sensitive networks are installed in a secure and restricted area.			
+All default vendor accounts and settings are changed prior to deployment. Default accounts not being used are, where possible, removed or disabled.			
+The Production Network Diagram up to date and correctly represent the production network.			
+The Cardholder Data Flows Diagram up to date and correct and correctly represent the production flows.			
