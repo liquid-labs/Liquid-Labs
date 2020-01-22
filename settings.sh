@@ -9,6 +9,17 @@ ORG_NPM_REGISTRY='https://registry.npmjs.org/'
 ORG_SENSITIVE_REPO='@liquid-labs/Liquid-Labs-sensitive'
 # Policy settings
 ORG_POLICY_REPO='@liquid-labs/Liquid-Labs'
-export HAS_TECHNICAL_OPS=1
-export DEVELOPS_APPS=1
-export GEN_SEC_LVL=3
+
+# Ops settings
+GEN_SEC_LVL=3 # high
+
+HAS_TECHNICAL_OPS=1
+DEVELOPS_APPS=1
+
+HAS_NETWORK=1
+HAS_SENSITIVE_NETWORK=1
+HAS_SENSITIVE_PHYSICAL_NETWORK=1
+HAS_SENSITIVE_VIRTUAL_NETWORK=1
+
+# Compliance settings
+HAS_CARDHOLDER_DATA=1
