@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@liquid-labs/policies-model": "file:.yalc/@liquid-labs/policies-model",
+    "@liquid-labs/policy-core": "file:.yalc/@liquid-labs/policy-core",
     "@liquid-labs/policy-devops": "file:.yalc/@liquid-labs/policy-devops"
   },
   "liquidDev": {
