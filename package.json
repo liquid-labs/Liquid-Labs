@@ -20,9 +20,7 @@
     "@liquid-labs/policy-devops": "^1.0.0-alpha.3"
   },
   "dependencies": {
-    "@liquid-labs/policies-model": "file:.yalc/@liquid-labs/policies-model",
-    "@liquid-labs/policy-core": "file:.yalc/@liquid-labs/policy-core",
-    "@liquid-labs/policy-devops": "file:.yalc/@liquid-labs/policy-devops"
+    "@liquid-labs/policies-model": "^1.0.0-beta.8"
   },
   "liquidDev": {
     "changeControl": {
