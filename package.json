@@ -3,7 +3,9 @@
   "version": "1.0.0-beta.1",
   "description": "Liquid Labs public info.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile --silent",
+    "build:refresh": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile clean && make -f .build/main.makefile --silent"
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,11 @@
   "homepage": "https://github.com/Liquid-Labs/org_settings#readme",
   "optionalDependencies": {
     "@liquid-labs/policy-core": "^1.0.0-alpha.3",
-    "@liquid-labs/policy-devops": "^1.0.0-alpha.3"
+    "@liquid-labs/policy-devops": "^1.0.0-alpha.4"
   },
   "dependencies": {
-    "@liquid-labs/policies-model": "^1.0.0-beta.8"
+    "@liquid-labs/policies-model": "file:liquid-labs-policies-model-1.0.0-beta.8.tgz",
+    "@liquid-labs/policy-devops": "file:.yalc/@liquid-labs/policy-devops"
   },
   "liquidDev": {
     "changeControl": {
