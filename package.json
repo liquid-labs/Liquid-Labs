@@ -19,11 +19,10 @@
   "homepage": "https://github.com/Liquid-Labs/org_settings#readme",
   "optionalDependencies": {
     "@liquid-labs/policy-core": "^1.0.0-alpha.3",
-    "@liquid-labs/policy-devops": "^1.0.0-alpha.4"
+    "@liquid-labs/policy-devops": "^1.0.0-alpha.5"
   },
   "dependencies": {
-    "@liquid-labs/policies-model": "file:liquid-labs-policies-model-1.0.0-beta.8.tgz",
-    "@liquid-labs/policy-devops": "file:.yalc/@liquid-labs/policy-devops"
+    "@liquid-labs/policies-model": "^1.0.0-beta.10"
   },
   "liquidDev": {
     "changeControl": {
