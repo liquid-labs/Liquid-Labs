@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile --silent",
-    "build:refresh": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile clean && make -f .build/main.makefile --silent"
+    "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && make -f .build/main.makefile --silent"
   },
   "repository": {
     "type": "git",
