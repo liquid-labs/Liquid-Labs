@@ -1,4 +1,3 @@
-
 # Coding Standards
 
 ## Purpose and scope
@@ -6,9 +5,6 @@
 This document deal with standards and guidelines regarding application and software code developed by the Company and her agents.
 
 ## Standards
-
-
-
 
 ### Documentation and style
 
@@ -19,8 +15,6 @@ This document deal with standards and guidelines regarding application and softw
 ### Documentatino and style
 
 * Developers are expected to be generally aware of major code conventions, but may relay on automated linting and smells to cure low level defects.
-
-
 
 ## Inline documentation guidelines
 

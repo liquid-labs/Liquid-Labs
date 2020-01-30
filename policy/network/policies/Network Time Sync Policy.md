@@ -1,4 +1,3 @@
-
 # Network Time Sync Policy
 
 ## Purpose and scope
@@ -9,9 +8,6 @@ This document is part of the [Network Security Framework](../Network%20Security%
 
 ## Policy
 
-
-
-
 ### -
 
 * Only designated, single purpose time servers within a trusted, sensitive network may connect to external time sources. All other hosts, equipment, and services must synchronize exclusively with the designated internal servers.
@@ -20,5 +16,3 @@ This document is part of the [Network Security Framework](../Network%20Security%
 * Access to time synchronization settings and time data tightly controlled, logged, and subject to audit.
 * Changes to the configuration and settings of internal time servers are subject to the Company’s [Change Control Policies](../../change_control/policies/Change%20Control%20Policy.md).
 * Internal time servers and related equipment, firmware and software are kept up to date and included in the company’s Risk Management and Vulnerability Management programs.
-
-

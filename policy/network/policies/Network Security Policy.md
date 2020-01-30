@@ -1,4 +1,3 @@
-
 # Network Security Policy
 
 ## Purpose and Scope
@@ -8,9 +7,6 @@ Company networks connected to operationally vital systems and sensitive data mus
 This document is part of the [Network Security Framework](../Network%20Security%20Framework.md).
 
 ## Policy
-
-
-
 
 ### Organization & Responsibilities
 
@@ -52,5 +48,3 @@ This document is part of the [Network Security Framework](../Network%20Security%
 ### 
 
 * All patches and fixes recommended by the vendors should applied in accordance with the Vulnerability Policy.
-
-
