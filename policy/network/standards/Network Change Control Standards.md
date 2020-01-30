@@ -27,5 +27,10 @@ Collectively, these standards, along with the rest of the [Change Control Framew
 
 ### Quality Assurance
 
-* An internal scan report performed on a production equivalent environment is referenced from the PR.
-* All non-passing tests have been clearly flagged and are addressed in a 'test-exceptions.txt' file included in the work branch history.
+* For [significant changes](#significant-network-changes-guidelines), an internal scan report performed on a production equivalent environment referenced from the PR.
+* Any issues with any internal scan has been clearly flagged and are addressed in a `test-exceptions.txt` file included in the work project history.
+
+### Release
+
+* If there have been any changes to a sensitive network configuration, an internal scan report performed on a production-equivalent environment prior to release must be included in the project history.
+* If there have been any changes to a sensitive network configuration, an internal scan report performed on the production environment shortly after release must be included in the project history.
