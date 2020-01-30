@@ -5,11 +5,11 @@
 
 
 
-#  Network Change Control Procedure
+#  Host Change Control Procedure
 
 ## Purpose and scope
 
-This document discusses the change control procedures specific to sensitive network configuration changes.
+This document discusses the change control procedures specific to sensitive host configuration changes.
 
 The majority of the work done in all the change control procedures involves working with and through a git repo to modify code, configuration, and documents. In general, you could look at (most) of the change controls as controlling the changes committed to the production pipelne (i.e., the `master` branch).
 
@@ -30,7 +30,7 @@ For general background, refer to:
 
 In addition:
 
-*  May coordinate with the [Host Change Control Procedure](../../host/procedures/Host%20Change%20Control%20Procedure.md).
+*  May coordinate with the [Network Change Control Procedure](../../network/procedures/Network%20Change%20Control%20Procedure.md).
 
 ## Procedure
 
@@ -60,9 +60,6 @@ In addition:
 
 
 
-With regards to network changes in particular, it is critcal to ensure that the [Production Network Diagram](https://drive.google.com/open?id=1mF9MKOsc3XkFgiNPxGYWBUrV0RG2ksfO) remains up-to-date and that any changes to the network are reflected in that document as appropriate.
-
-
 
 
 ### Submission
@@ -81,13 +78,11 @@ The Primary Implementor should submit Work Units for review whenever possible. I
 
 
 
-
-
 ### Testing and analysis
 
 
 
-Manual tests should be conducted according to the nature of the change and in accordance with the map[Common Network Component Standards:../standards/Common%20Network%20Component%20Standards.md]. The results of any manual tests must be added to the project's `.test_history/<work branch name>`.
+Manual tests should be conducted according to the nature of the change and in accordance with the map[UNDEFINED: reference standard:]. The results of any manual tests must be added to the project's `.test_history/<work branch name>`.
 
 
 
@@ -101,14 +96,12 @@ Manual tests should be conducted according to the nature of the change and in ac
 * The PR owner or a Project Manager may transfer PR ownership due to qualifactions and/or availability.
 * By reviewing changes, each reviewer asserting they are qualified to make assertions regarding their portion of the review.
 * Whenever possible, reviews should be performed by individuals who did not make significant contributions to the changes under review.
-* The Chief Network Engineer must review all changes.
+* The Chief Host Engineer must review all changes.
 
 * All necessary attestations will be encoded in the PR as checkable task items and must be processed by assigned reviewers.
 
    * Any exceptions to the requirements, no matter their source, are prominently noted in either the PR description or comments.
 * Once all reviewers assigned to a PR have approved the PR, it may be merged to master.
-
-
 
 
 

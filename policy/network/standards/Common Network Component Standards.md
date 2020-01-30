@@ -1,4 +1,3 @@
-
 # Common Network Component Standards
 
 ## Purpose and Scope
@@ -12,9 +11,6 @@ These standards document the general security rules for the management of Compan
  This document is part of the [Network Security Framework](../Network%20Security%20Framework.md).
 
 ## Standards
-
-
-
 
 ### Installation
 
@@ -60,5 +56,3 @@ These standards document the general security rules for the management of Compan
 * In the normal course of events, sensitive network modifications are effected through a CI/CD process after all relevant change control procedures have been observed.
 * Manual/emergency modification of sensitive networks is made via the console port or via an encrypted session using strong cryptography and multi-factor authentication. 
 * Administrative access to firewalls is controlled through access to the cloud services administrative console and the passwords must follow the Company’s Identification & Authentication Policy.
-
-

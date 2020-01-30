@@ -22,7 +22,7 @@
     "@liquid-labs/policy-devops": "^1.0.0-alpha.5"
   },
   "dependencies": {
-    "@liquid-labs/policies-model": "^1.0.0-beta.10"
+    "@liquid-labs/policies-model": "^1.0.0-beta.11"
   },
   "liquidDev": {
     "changeControl": {
