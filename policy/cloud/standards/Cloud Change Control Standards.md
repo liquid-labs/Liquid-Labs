@@ -1,8 +1,8 @@
-# Network Change Control Standards
+# Cloud Change Control Standards
 
 ## Purpose and scope
 
-This document discusses the controls applied to any modifications to sensitive Company networks.
+This document discusses the controls applied to any modifications to sensitive Company cloud services.
 
 
 Collectively, these standards, along with the rest of the [Change Control Framework](../../change_control/Change%20Control%20Framework.md) help ensure the continued security, reliability, and compliance of Company systems and operations.
@@ -13,7 +13,7 @@ Collectively, these standards, along with the rest of the [Change Control Framew
 
 ### General
 
-* All virtual/cloud based network components and configurations are managed as "as code", with the network code "executed" to realize the production network, and the "network code" is managed through the change control process.
+* All cloud services are managed as "as code", with the cloud services configuration+code executed to realize the production cloud services, and the "cloud services code" is managed through the change control process.
 
 ### Task Specification
 
@@ -31,10 +31,5 @@ Collectively, these standards, along with the rest of the [Change Control Framew
 
 ### Quality Assurance
 
-* For [significant changes](#significant-network-changes-guidelines), an internal scan report performed on a production equivalent environment referenced from the PR.
-* Any issues with any internal scan has been clearly flagged and are addressed in a `test-exceptions.txt` file included in the work project history.
-
-### Release
-
-* If there have been any changes to a sensitive network configuration, an internal scan report performed on a production-equivalent environment prior to release must be included in the project history.
-* If there have been any changes to a sensitive network configuration, an internal scan report performed on the production environment shortly after release must be included in the project history.
+* An internal scan report performed on a production equivalent environment is referenced from the PR.
+* All non-passing tests have been clearly flagged and are addressed in a 'test-exceptions.txt' file included in the work branch history.

@@ -60,7 +60,6 @@ In addition:
 
 
 
-With regards to network changes in particular, it is critcal to ensure that the [Production Network Diagram](https://drive.google.com/open?id=1mF9MKOsc3XkFgiNPxGYWBUrV0RG2ksfO) remains up-to-date and that any changes to the network are reflected in that document as appropriate.
 
 
 

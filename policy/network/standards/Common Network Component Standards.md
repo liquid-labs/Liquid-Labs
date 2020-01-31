@@ -14,8 +14,6 @@ These standards document the general security rules for the management of Compan
 
 ### Installation
 
-* Physical components of sensitive networks are installed in a secure and restricted area.
-* Virtual components of sensitive networks are hosted by a PCI DSS certified cloud service provider.
 * All default vendor accounts and settings are changed prior to deployment. Default accounts not being used are, where possible, removed or disabled. 
 
 ### Access
@@ -23,11 +21,6 @@ These standards document the general security rules for the management of Compan
 * Access to production network resources and configurations is limited to Senior Network Engineers and the Security Officer.
 * Individual user accounts should be utilized for access to production network resources and configurations wherever possible.
 * Where shared access accounts must be used to access production network resources and configurations, the shared credentials must only be accessible to Senior Network Engineers and the Security Officer.
-
-### Topology
-
-* All traffic from untrusted networks and the public Internet in particular is routed through a DMZ and all internal (trusted) network components will only accept connections from the DMZ.
-* A firewall is implemented at each Internet connection and between any DMZ and internal networks.
 
 ### Documentation
 
@@ -38,7 +31,6 @@ These standards document the general security rules for the management of Compan
 ### Configuration
 
 * Production network components implement a "default deny" approach for all inbound and outbound traffic, allowing only explicitly authorized connections, services, etc. on an "as needed" basis.
-* Inbound and outbound traffic is restricted to that traffic necessary to implement product functionality and adheres to Company Policy.
 * Implementation of the production DMZ in particular must ensure that inbound traffic is only allowed to publicly accessible services, protocols and ports. 
 * New security requirements, vulnerabilities, and/or best practices are reviewed by the Chief Network Engineer and Security Officer and incorporated into sensitive network configurations every 6 months.
 * Inbound traffic to any given host is limited to trusted, internal network IPs and DMZ IPs. Thus, all Internet traffic must route through the DMZ.
@@ -47,7 +39,6 @@ These standards document the general security rules for the management of Compan
 * Network Address Translation (NAT) and Port Address Translation (PAT) technology are employed at the DMZ to prevent Company TCP/IP addresses from being used on the Internet. 
 * Disclosure of internal/private IP addresses by staff not permitted except as required by auditors or as part of support/troubleshooting efforts with hosting providers or similar. 
 * Stateful Inspection/Dynamic Packet Filtering architecture is used to ensure that established connections from a legitimate source are allowed into the network.
-* The active configurations for all network resources matches the current, released configurations.
 
 ### Change Control
 

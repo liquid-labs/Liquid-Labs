@@ -11,6 +11,10 @@ Collectively, these standards, along with the rest of the [Change Control Framew
 
 ## Standards
 
+### General
+
+* All host configurations are managed as "as code", with the host code "executed" to realize the production host instances, and the "host configuration code" is managed through the change control process.
+
 ### Task Specification
 
 * The Task deliverables include appropriately updating the 'Deploy notes' section of the Release Notes where the implementation is expected to include changes which require non-standard deploy procedures or additional steps.
