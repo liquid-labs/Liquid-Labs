@@ -5,7 +5,7 @@
 
 
 
-#  Host Change Control Procedure
+#  Host Modification Procedure
 
 ## Purpose and scope
 
@@ -23,14 +23,14 @@ Required documentary evidence:
 For general background, refer to:
 
 *  [Change Control Policy](../../change_control/policies/Change%20Control%20Policy.md)
-*  [$name]($url) 
+*  [Host Change Control Standards](../standards/Host%20Change%20Control%20Standards.md) 
 *  You may refer to the [Task Management Procedure](../../change_control/procedures/Task%20Management%20Procedure.md) for specifics regarding Task specification.
 
 
 
 In addition:
 
-*  May coordinate with the [Network Change Control Procedure](../../network/procedures/Network%20Change%20Control%20Procedure.md).
+*  May coordinate with the [Network Modification Procedure](../../network/procedures/Network%20Modification%20Procedure.md).
 
 ## Procedure
 
