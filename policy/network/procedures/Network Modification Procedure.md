@@ -6,12 +6,11 @@
 
 
 #  Network Modification Procedure
+_(PCI DSS v3.2.1 ref 6.3.b, 6.4.4, 6.4.5)_
 
 ## Purpose and scope
 
-This document discusses the change control procedures specific to sensitive network configuration changes.
-
-The majority of the work done in all the change control procedures involves working with and through a git repo to modify code, configuration, and documents. In general, you could look at (most) of the change controls as controlling the changes committed to the production pipelne (i.e., the `master` branch).
+This document discusses the change control procedures specific to sensitive network configuration changes.The majority of the work done in all the change control procedures involves working with and through a git repo to modify code, configuration, and documents. In general, you could look at (most) of the change controls as controlling the changes committed to the production pipelne (i.e., the `master` branch).
 
 ## Forms, documentation, & references
 
@@ -60,10 +59,6 @@ In addition:
 
 
 
-
-
-
-
 ### Submission
 
 
@@ -80,14 +75,12 @@ The Primary Implementor should submit Work Units for review whenever possible. I
 
 
 
-
-
 ### Testing and analysis
 
 
 
-Manual tests should be conducted according to the nature of the change and in accordance with the map[Common Network Component Standards:../standards/Common%20Network%20Component%20Standards.md]. The results of any manual tests must be added to the project's `.test_history/<work branch name>`.
-
+Manual tests should be conducted according to the
+[Network Testing Standards]({{ .network.standards.NETWORK_CHANGE_CONTROL_STANDARDS }}#quality-assurance). The results of any manual tests must be added to the project's `.history/<work branch name>`.
 
 
 
@@ -106,8 +99,6 @@ Manual tests should be conducted according to the nature of the change and in ac
 
    * Any exceptions to the requirements, no matter their source, are prominently noted in either the PR description or comments.
 * Once all reviewers assigned to a PR have approved the PR, it may be merged to master.
-
-
 
 
 

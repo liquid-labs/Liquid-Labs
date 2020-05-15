@@ -14,36 +14,38 @@ These standards document the general security rules for the management of Compan
 
 ### Installation
 
-* All default vendor accounts and settings are changed prior to deployment. Default accounts not being used are, where possible, removed or disabled. 
+* <a id="ABC92EAF-9AAD-42A1-95DA-6DDDD3512AF8">All default vendor accounts and passwords are changed prior to deployment. Default accounts not being used are, where possible, removed or disabled. </a> _(PCI DSS v3.2.1 ref 2.1.a, 2.1.b)_
 
 ### Access
 
-* Access to production network resources and configurations is limited to Senior Network Engineers and the Security Officer.
-* Individual user accounts should be utilized for access to production network resources and configurations wherever possible.
-* Where shared access accounts must be used to access production network resources and configurations, the shared credentials must only be accessible to Senior Network Engineers and the Security Officer.
+* <a id="76A4561B-9948-4D31-96B7-9B26299E6C0A">Access to production network resources and configurations is limited to Senior Network Engineers and the Security Officer.</a>
+* <a id="FFBAE9E9-1445-4B62-BA3A-B2B5F0522716">Individual user accounts should be utilized for access to production network resources and configurations wherever possible.</a>
+* <a id="F2C0436D-DC73-443E-8108-542D39C6948E">Where shared access accounts must be used to access production network resources and configurations, the shared credentials must only be accessible to Senior Network Engineers and the Security Officer.</a>
 
 ### Documentation
 
-* The Production Network Diagram up to date and correctly represent the production network.
-* Every enabled services, protocols, ports, etc. on a sensitive network documents the business need directly or by reference at the point in the configuration file where the service, etc. is enabled.
-* Any allowed insecure services are clearly marked as such in the configurations with 'INSECURE'.
+* <a id="2B0E6CA6-C0E3-41A0-9207-6A8896F23E18">The Production Network Diagram up to date and correctly represent the production network.</a> _(PCI DSS v3.1.2 ref 1.1.2.a)_
+* <a id="2BACF830-0111-44BB-9CFA-7B96F044396D">Every enabled services, protocols, ports, etc. on a sensitive network documents the business need directly or by reference at the point in the configuration file where the service, etc. is enabled.</a> _(PCI DSS v3.2.1 ref 1.1.6, 2.2.d, 2.2.2)_
+* <a id="5BE19F73-7F0D-4AF7-90E6-C95F92FC8F5C">Any allowed insecure services are clearly marked as such in the configurations with 'INSECURE'.</a> _(PCI DSS v3.1.2 ref 1.1.6.b, 1.2.1.a)_
 
 ### Configuration
 
-* Production network components implement a "default deny" approach for all inbound and outbound traffic, allowing only explicitly authorized connections, services, etc. on an "as needed" basis.
-* Implementation of the production DMZ in particular must ensure that inbound traffic is only allowed to publicly accessible services, protocols and ports. 
-* New security requirements, vulnerabilities, and/or best practices are reviewed by the Chief Network Engineer and Security Officer and incorporated into sensitive network configurations every 6 months.
-* Inbound traffic to any given host is limited to trusted, internal network IPs and DMZ IPs. Thus, all Internet traffic must route through the DMZ.
-* All traffic inbound to the DMZ from an untrusted network, and especially the Internet and any public network, presenting an internal IP address is blocked; i.e., anti-spoofing measures are in place. 
-* Any traffic outbound from a sensitive network must be specifically authorized; destination IP addresses and ports should be whitelisted whenever possible with whitelisted domains used where necessary.
-* Network Address Translation (NAT) and Port Address Translation (PAT) technology are employed at the DMZ to prevent Company TCP/IP addresses from being used on the Internet. 
-* Disclosure of internal/private IP addresses by staff not permitted except as required by auditors or as part of support/troubleshooting efforts with hosting providers or similar. 
-* Stateful Inspection/Dynamic Packet Filtering architecture is used to ensure that established connections from a legitimate source are allowed into the network.
+* <a id="2FB47EBD-31DE-47FB-BA42-007B680BFD48">Production network components implement a "default deny" approach for all inbound and outbound traffic, allowing only explicitly authorized connections, services, etc. on an "as needed" basis.</a> _(PCI DSS v3.2.1 ref 1.2.1, 1.2.1.a, 1.1.6.a)_
+* <a id="1D5F0ACE-B1EC-4DBB-8110-26CEA1F6983C">Implementation of the production DMZ in particular must ensure that inbound traffic is only allowed to publicly accessible services, protocols and ports. </a> _(PCI DSS v3.2.1 ref 1.3.1)_
+* <a id="16391346-DA25-4A86-A9B7-056485917B38">New security requirements, vulnerabilities, and/or best practices are reviewed by the Chief Network Engineer and Security Officer and incorporated into sensitive network configurations every 6 months.</a> _(PCI DSS v3.2.1 ref 1.1.5.a, 1.1.7.a)_
+* <a id="F8E59036-E686-48A7-B444-87C5D6461467">All internal network resources utilizes only private IPs.</a>
+* <a id="48E947DF-D20D-46AD-86C1-588348A65098">All internal traffic is limited to valid, private IP ranges associated with an internal network segment or the DMZ.</a> _(PCI DSS v3.2.1 ref 1.3.2)_
+* <a id="50F94B73-DA3D-447B-8671-CFB1749869CD">The DMZ only allows inbound requests originating from public IP addresses and blocks any requests originating from a private IP. This prevents spoofing of internal IPs. </a> _(PCI DSS v3.2.1 ref 1.3.3)_
+* <a id="BF0548D7-A167-4FA5-B88A-19AD90584182">Any traffic outbound from a sensitive network must be specifically authorized; destination IP addresses and ports should be whitelisted whenever possible with whitelisted domains used where necessary.</a> _(PCI DSS v3.2.1 ref 1.3.4)_
+* <a id="CC0F53DF-7F75-48B9-96AA-5933F90706DB">Inbound external connections are established at the DMZ and only established connections are forwarded to the internal network.</a> _(PCI DSS v3.2.1 ref 1.3.5)_
+* <a id="46DE54C2-5F0C-4414-A542-E78E2349FED1">Network Address Translation (NAT) and Port Address Translation (PAT) technology are employed at the DMZ to prevent Company TCP/IP addresses from being used on the Internet. </a> _(PCI DSS v3.2.1 ref 1.3.7.a)_
+* <a id="D072380C-90B2-43DE-9E3A-BA6413F6E30A">Disclosure of internal/private IP addresses by staff not permitted except as required by auditors or as part of support/troubleshooting efforts with hosting providers or similar. </a> _(PCI DSS v3.2.1 ref 1.3.7.b)_
+* <a id="76C9F68B-2051-48A2-8487-AAC5918C47B1">Stateful Inspection/Dynamic Packet Filtering architecture is used to ensure that established connections from a legitimate source are allowed into the network.</a> _(PCI DSS v3.2.1 ref 1.3.5)_
 
 ### Change Control
 
-* All changes sensitive network configurations must be processed via the company’s Change Management System to ensure formal approval is obtained and all testing successfully completed. 
-* Modification to sensitive network configurations must be reviewed by Senior Network Engineers.
-* In the normal course of events, sensitive network modifications are effected through a CI/CD process after all relevant change control procedures have been observed.
-* Manual/emergency modification of sensitive networks is made via the console port or via an encrypted session using strong cryptography and multi-factor authentication. 
-* Administrative access to firewalls is controlled through access to the cloud services administrative console and the passwords must follow the Company’s Identification & Authentication Policy.
+* <a id="90ABA3DB-3720-441D-B539-C87E30BC6CC4">All changes sensitive network configurations must be processed via the company’s Change Management System to ensure formal approval is obtained and all testing successfully completed. </a> _(PCI DSS v3.2.1 ref 1.1.1)_
+* <a id="2B14963E-E834-4BDC-857A-EF2F213E2962">Modification to sensitive network configurations must be reviewed by Senior Network Engineers.</a>
+* <a id="5E6CB92E-BDB4-4870-A7BC-8492EA1C0330">In the normal course of events, sensitive network modifications are effected through a CI/CD process after all relevant change control procedures have been observed.</a>
+* <a id="AE39E19F-2754-443A-8FF7-E90A3FEC290D">Manual/emergency modification of sensitive networks is made via the console port or via an encrypted session using strong cryptography and multi-factor authentication. </a> _(PCI DSS v3.2.1 ref 2.3)_
+* <a id="56B66F31-50EC-42CF-A877-67779EFA2A4D">Administrative access to firewalls is controlled through access to the cloud services administrative console and the passwords must follow the Company’s Identification & Authentication Policy.</a> _(PCI DSS v3.2.1 ref 8)_

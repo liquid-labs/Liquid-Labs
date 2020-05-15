@@ -1,6 +1,27 @@
 # Change Control Framework
 
-## Key Concepts
+## References
+
+### Policies
+
+* [Change Control Policy](policies/Change%20Control%20Policy.md)
+
+### Standards
+
+* [Code Change Control Standards](../code/standards/Code%20Change%20Control%20Standards.md)
+* [Network Change Control Standards](../network/standards/Network%20Change%20Control%20Standards.md)
+* [Host Change Control Standards](../host/standards/Host%20Change%20Control%20Standards.md)
+* _*UNDEFINED: Policy Change Control Standards*_
+
+### Procedures
+
+* [Task Management Procedure](procedures/Task%20Management%20Procedure.md)
+* [Code Modification Procedure](../code/procedures/Code%20Modification%20Procedure.md)
+* [Host Modification Procedure](../host/procedures/Host%20Modification%20Procedure.md)
+* [Cloud Services Modification Procedure](../cloud/procedures/Cloud%20Services%20Modification%20Procedure.md)
+* [Network Modification Procedure](../network/procedures/Network%20Modification%20Procedure.md)
+
+## Conceptual guidelines
 
 ### Unit of Work
 
@@ -45,7 +66,7 @@ The Task description is composed of two or three sections:
   ```
 #### Task notes guidelines
 
-* The final, optional
+* A 'Notes' section is optional, but may be used to further expound on potentially complex, confusing, or otherwise non-obvious points that need further explanation.
 
 #### Task summary guidelines
 
@@ -58,18 +79,26 @@ The Task description is composed of two or three sections:
 * All things being equal, default to the next issue in your task queue.This can be retrieved with `liq work issues suggest`.
 * "One Task, one Pull Request" is the default, but bundling multiple tasks as acceptable where it is expedient to do so and does not unduly bloat the changes.
 
+## Code and schema update guidelines
+System conventions ensure that it is always safe to re-deploy previous generation code after any update. Thus, the backout procedure is a simple 'revert code' process.
 
+The difficulty in reverting code always stems from an incompatible schema change. Therefore, each generation of code is always compatible with the previous generation schema. This is accomplished by making schema changes to live data only additive. The new fields or tables added in the schema may be used by the new code, but the new code does not require it.
 
-## References
+An incremental update may be initiated in the system to bring all data in line with the new schema. These incremental updates may cause older fields, tables, or relations to become obsolete. Once the updates have permeated the database, then these older fields, tables, or relations are considered dead and can be removed in a subsequent update.
 
-### Policies
+Thus, in this model, a "compatibility breaking" change always takes at least  two code and three schema updates to accomplish:
 
-* [Change Control Policy](policies/Change%20Control%20Policy.md)
+1. Assume baseline code and schema versions, C<sub>n</sub> and S<sub>n</sub>.
+2. A new version of code (C<sub>n+1</sub>) and schema (S<sub>n+1</sub>) are released which use new relations when present. C<sub>n+1</sub> must have the following properties:
+   * When retrieving data, test to see if new schema data present and if not, use old data structures or populate new structures in-place as appropriate.
+   * When writing new data, test if old data schema support is configured. If so, then write old data along with new.
+   * Iteratively update the data in the system to fully conform to the new schema.
+3. Once all data has been updated we can deploy a version of the code C<sub>n+2</sub> which only works with the new schema, along with a new schema S<sub>n+2</sub> which removes dead structures.
 
-### Standards
+C<sub>n+1</sub>->C<sub>n</sub> is safe because the old data is still in place and maintained by C<sub>n+1</sub>, even though C<sub>n+1</sub> prefers the new data fields if present.
 
-* [Code Change Control Standards](../code/standards/Code%20Change%20Control%20Standards.md)
-* [Network Change Control Standards](../network/standards/Network%20Change%20Control%20Standards.md)
-* [Host Change Control Standards](../host/standards/Host%20Change%20Control%20Standards.md)
-* _*UNDEFINED: Policy Change Control Standards*_
+C<sub>n+2</sub>->C<sub>n+1</sub> is safe because C<sub>n+1</sub> can be configured to ignore the old data structures entirely.
 
+Thus, there is always at least one 'bridge' code and schema version between a 'source' and 'goal' code/schema set. In practice, there may be multiple iterations and generations to allow sufficient time to vet changes or for operational efficiency and due to coding priorities.
+
+In some cases, where the mapping between two changes isn't trivial, you may have one or more preparatory releases of code and schema generations that prepare but don't yet make use of the new data.

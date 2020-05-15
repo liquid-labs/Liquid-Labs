@@ -5,12 +5,12 @@
 
 
 
-#  Host Modification Procedure
+#  Code Modification Procedure
 _(PCI DSS v3.2.1 ref 6.3.b, 6.4.4, 6.4.5)_
 
 ## Purpose and scope
 
-This document discusses the change control procedures specific to sensitive host configuration changes.The majority of the work done in all the change control procedures involves working with and through a git repo to modify code, configuration, and documents. In general, you could look at (most) of the change controls as controlling the changes committed to the production pipelne (i.e., the `master` branch).
+This document discusses the change control procedures specific to sensitive code changes.The majority of the work done in all the change control procedures involves working with and through a git repo to modify code, configuration, and documents. In general, you could look at (most) of the change controls as controlling the changes committed to the production pipelne (i.e., the `master` branch).
 
 ## Forms, documentation, & references
 
@@ -22,14 +22,10 @@ Required documentary evidence:
 For general background, refer to:
 
 *  [Change Control Policy](../../change_control/policies/Change%20Control%20Policy.md)
-*  [Host Change Control Standards](../standards/Host%20Change%20Control%20Standards.md) 
+*  [Code Change Control Standards](../standards/Code%20Change%20Control%20Standards.md) 
 *  You may refer to the [Task Management Procedure](../../change_control/procedures/Task%20Management%20Procedure.md) for specifics regarding Task specification.
 
 
-
-In addition:
-
-*  May coordinate with the [Network Modification Procedure](../../network/procedures/Network%20Modification%20Procedure.md).
 
 ## Procedure
 
@@ -91,7 +87,7 @@ Manual tests should be conducted according to the
 * The PR owner or a Project Manager may transfer PR ownership due to qualifactions and/or availability.
 * By reviewing changes, each reviewer asserting they are qualified to make assertions regarding their portion of the review.
 * Whenever possible, reviews should be performed by individuals who did not make significant contributions to the changes under review.
-* The Chief Host Engineer must review all changes.
+* The Chief Code Engineer must review all changes.
 
 * All necessary attestations will be encoded in the PR as checkable task items and must be processed by assigned reviewers.
 
