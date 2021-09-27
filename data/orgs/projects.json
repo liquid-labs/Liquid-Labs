@@ -1,0 +1,5900 @@
+{
+  "agreements-core": {
+    "package": {
+      "name": "@liquid-labs/agreements-core",
+      "version": "1.0.0-alpha.3",
+      "description": "Basic personal and commercial agreements plus core clauses.",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/agreements-core.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/agreements-core/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/agreements-core#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/gucci-wrapper": "^1.0.0-alpha.2"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "agreements-private-loans": {
+    "package": {
+      "name": "@liquid-labs/agreements-private-loans",
+      "version": "1.0.0-alpha.0",
+      "description": "Liquid agreements module supporting private loan agreements.",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/liquid-labs/agreements-private-loans.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "bugs": {
+        "url": "https://github.com/liquid-labs/agreements-private-loans/issues"
+      },
+      "homepage": "https://github.com/liquid-labs/agreements-private-loans#readme",
+      "liq": {
+        "orgBase": "git@github.com:liquid-labs/liquid-labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/gucci-wrapper": "^1.0.0-alpha.2"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "bash-qa": {
+    "package": {
+      "name": "@liquid-labs/bash-qa",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/bash-qa.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/bash-qa/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/bash-qa#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "bash-rollup": {
+    "package": {
+      "name": "@liquid-labs/bash-rollup",
+      "version": "1.0.0-alpha.6",
+      "description": "Rolls up sourced/imported bash scripts into a single script.",
+      "bin": {
+        "bash-rollup": "dist/bash-rollup.sh"
+      },
+      "scripts": {
+        "build": "make",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/bash-rollup.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/bash-rollup/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/bash-rollup#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "bash-toolkit": {
+    "package": {
+      "name": "@liquid-labs/bash-toolkit",
+      "version": "1.0.0-alpha.57",
+      "description": "A collection of useful bash functions.",
+      "files": [
+        "dist"
+      ],
+      "scripts": {
+        "build": "make",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "pretest": "TEST_TYPES=unit catalyst-scripts pretest && mkdir -p test-tmp/ && npm run build",
+        "test": "TEST_TYPES=unit catalyst-scripts test",
+        "posttest": "rm -rf test-tmp/",
+        "preversion": "npm test",
+        "version": "npm run build && git add -fA dist",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build",
+        "install-clean": "rm -rf package-lock.json node_modules/ && npm install"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/bash-toolkit.git"
+      },
+      "keywords": [
+        "bash",
+        "toolkit"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/bash-toolkit/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/bash-toolkit#readme",
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.4",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.34",
+        "shelljs": "^0.8.3"
+      },
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-bootstrap": {
+    "package": {
+      "name": "@liquid-labs/catalyst-bootstrap",
+      "homepage": "https://zanerock.github.io/@liquid-labs/catalyst-bootstrap",
+      "version": "1.0.0-prototype.1",
+      "license": "ISC",
+      "private": true,
+      "files": [
+        "build/"
+      ],
+      "dependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.16",
+        "@liquid-labs/catalyst-core-ui": "file:.yalc/@liquid-labs/catalyst-core-ui",
+        "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.2",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.8",
+        "@liquid-labs/catalyst-theme": "file:.yalc/@liquid-labs/catalyst-theme",
+        "@liquid-labs/catalyst-users-ui": "file:.yalc/@liquid-labs/catalyst-users-ui",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.1",
+        "@liquid-labs/mui-two-tone": "^1.0.0-prototype.1",
+        "@liquid-labs/react-validation": "^1.0.0-prototype.2",
+        "@liquid-labs/react-viewport-context": "^1.0.0-prototype.4",
+        "@liquid-labs/react-waiter": "^1.0.0-prototype.11",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.4",
+        "@liquid-labs/validators": "^1.0.0-prototype.2",
+        "@material-ui/core": "^3.9.3",
+        "@material-ui/icons": "^3.0.2",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "focus-trap-react": "^6.0.0",
+        "lodash.isequal": "^4.5.0",
+        "lodash.merge": "^4.6.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.pick": "^4.4.0",
+        "lodash.reduce": "^4.6.0",
+        "lodash.upperfirst": "^4.3.1",
+        "mdi-material-ui": "^5.16.0",
+        "moment-timezone": "^0.5.26",
+        "normalizr": "^3.4.1",
+        "notistack": "^0.6.1",
+        "prop-types": "^15.7.2",
+        "query-string": "^6.8.3",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-markdown": "^4.2.2",
+        "react-redux": "^6.0.1",
+        "react-router-dom": "^5.0.1",
+        "react-scripts": "^2.1.8",
+        "react-sizes": "^1.0.4",
+        "recompose": "^0.30.0",
+        "redux": "^4.0.4",
+        "redux-thunk": "^2.3.0",
+        "squirrelly": "^7.5.0"
+      },
+      "scripts": {
+        "start": "catalyst services start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "postupdate": "echo 'restarting html @'`date -R`>>reastart.log && catalyst services restart --no-start html"
+      },
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ],
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.21",
+        "redux-logger": "^3.0.6"
+      },
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          },
+          {
+            "iface": "html",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          },
+          {
+            "iface": "rest",
+            "params-req": [
+              "CLOUDSQL_INSTANCE_NAME",
+              "CLOUDSQL_CONNECTION_PROT",
+              "CLOUDSQL_CONNECTION_NAME",
+              "CLOUDSQL_SERVICE_ACCT",
+              "CLOUDSQL_DB",
+              "CLOUDSQL_USER",
+              "CLOUDSQL_PASSWORD",
+              "GCP_PROJECT_ID",
+              "FIREBASE_DB_URL",
+              "FIREBASE_CREDS_FILE"
+            ],
+            "params-opt": [],
+            "config-const": {
+              "ADD_GO_APP_PERSONS": "@liquid-labs/catalyst-persons-api:go/app.yaml"
+            }
+          }
+        ],
+        "version-check": {
+          "options": "--skip-unused"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-content-api": {
+    "package": {
+      "name": "@liquid-labs/catalyst-content-api",
+      "version": "1.0.0-prototype.1",
+      "description": "Catalyst model definition for 'content' and related resources.",
+      "files": [
+        "dist/",
+        "go/",
+        "app.yaml",
+        "go.mod",
+        "go.sum",
+        ".catalyst"
+      ],
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "prepare": "npm run build",
+        "pretest": "TEST_TYPES=unit catalyst-scripts pretest",
+        "test": "TEST_TYPES=unit catalyst-scripts test",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch",
+        "postyalc": "chmod a+x ~/.yalc/packages/@liquid-labs/catalyst-core-api/*/bin/*"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-content-api.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-content-api/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-content-api#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-content-model": "^1.0.0-prototype.0",
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.11",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.6",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.25",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0",
+        "squirrelly": "^7.1.1"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-content-model": "^1.0.0-prototype.0",
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.11",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.6",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.25",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "dependencies": {},
+      "_catalystRequiresService": [
+        {
+          "iface": "sql-mysql",
+          "params-req": [],
+          "params-opt": [],
+          "config-const": []
+        },
+        {
+          "iface": "rest",
+          "params-req": [
+            "CLOUDSQL_INSTANCE_NAME",
+            "CLOUDSQL_CONNECTION_PROT",
+            "CLOUDSQL_CONNECTION_NAME",
+            "CLOUDSQL_CREDS",
+            "CLOUDSQL_DB",
+            "CLOUDSQL_USER",
+            "CLOUDSQL_PASSWORD",
+            "GCP_PROJECT_ID",
+            "FIREBASE_DB_URL",
+            "FIREBASE_CREDS_FILE"
+          ],
+          "params-opt": [],
+          "config-const": {
+            "ADD_GO_APP_CONTENT": "@liquid-labs/catalyst-content-api:go/app.yaml"
+          }
+        }
+      ]
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-content-model": {
+    "package": {
+      "name": "@liquid-labs/catalyst-content-model",
+      "version": "1.0.0-prototype.2",
+      "description": "Catalyst API for 'content' and related resources.",
+      "main": "dist/index.js",
+      "module": "./dist/index.es.js",
+      "files": [
+        "go/",
+        "data/",
+        "bin/",
+        "dist/",
+        "go.mod",
+        "go.sum",
+        ".catalyst"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "prepare": "npm run build",
+        "pretest": "TEST_TYPES=unit catalyst-scripts pretest",
+        "test": "TEST_TYPES=unit catalyst-scripts test",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch",
+        "postyalc": "chmod a+x ~/.yalc/packages/@liquid-labs/catalyst-core-api/*/bin/*"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-content-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-content-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-content-model#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.11",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.6",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.25",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.11",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.6",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.25",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-content-ui": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-core-api": {
+    "package": {
+      "name": "@liquid-labs/catalyst-core-api",
+      "version": "1.0.0-prototype.16",
+      "description": "Core backend Catalyst components.",
+      "directories": {
+        "doc": "docs"
+      },
+      "main": "./dist/index.js",
+      "module": "./dist/index.es.js",
+      "files": [
+        "go/",
+        "data/",
+        "bin/",
+        "dist/",
+        "go.mod",
+        "go.sum",
+        ".catalyst"
+      ],
+      "bin": {
+        "go-dev-server.sh": "./bin/go-dev-server.sh"
+      },
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "prepare": "npm run build",
+        "pretest": "TEST_TYPES=unit catalyst-scripts pretest",
+        "test": "TEST_TYPES=unit catalyst-scripts test",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch",
+        "postyalc": "chmod a+x ~/.yalc/packages/@liquid-labs/catalyst-core-api/*/bin/*"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-core-api.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-core-api/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-core-api#readme",
+      "catalyst": {
+        "version": "0.0.0",
+        "provides": [
+          {
+            "name": "go-dev-server",
+            "interface-classes": [
+              "rest"
+            ],
+            "platform-types": [
+              "local"
+            ],
+            "purposes": [
+              "dev",
+              "test"
+            ],
+            "ctrl-scripts": [
+              "go-dev-server.sh"
+            ],
+            "params-req": [],
+            "params-opt": [],
+            "config-const": {}
+          }
+        ],
+        "rollupConfig": {
+          "commonjsConfig": {
+            "namedExports": {
+              "node_modules/react/index.js": [
+                "useEffect",
+                "useState"
+              ]
+            }
+          }
+        },
+        "jestConfig": {
+          "testEnvironment": "jsdom"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.4",
+        "fetch-mock": "^7.3.1",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "node-fetch": "^2.6.0",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-mock-store": "^1.5.3",
+        "redux-thunk": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/regex-repo": "latest",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.0",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "dependencies": {
+        "@liquid-labs/cloud-sql-proxy": "^1.0.0-alpha.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-core-ui": {
+    "package": {
+      "name": "@liquid-labs/catalyst-core-ui",
+      "version": "1.0.0-prototype.8",
+      "description": "Core Catalyst app libraries.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/",
+        "bin/",
+        ".catalyst"
+      ],
+      "bin": {
+        "react-dev-server.sh": "bin/react-dev-server.sh"
+      },
+      "scripts": {
+        "prebuild": "rm -rf dist/* && mkdir -p dist",
+        "build": "catalyst-scripts build",
+        "start": "catalyst-scripts start",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build",
+        "watch": "catalyst-scripts watch",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postyalc": "chmod a+x ~/.yalc/packages/@liquid-labs/catalyst-core-ui/*/bin/*"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-core.git"
+      },
+      "keywords": [
+        "react"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-core/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-core#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.5",
+        "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.0",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.4",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.21",
+        "@liquid-labs/catalyst-theme": "^1.0.0-prototype.1",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/react-validation": "^1.0.0-prototype.0",
+        "@liquid-labs/react-viewport-context": "^1.0.0-prototype.4",
+        "@liquid-labs/react-waiter": "^1.0.0-prototype.11",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.0",
+        "@liquid-labs/validators": "^1.0.0-prototype.2",
+        "@material-ui/core": "^3.9.2",
+        "@material-ui/icons": "^3.0.2",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "dom-testing-library": "^3.16.8",
+        "lodash.camelcase": "^4.3.0",
+        "lodash.isequal": "^4.5.0",
+        "lodash.merge": "^4.6.1",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "lodash.upperfirst": "^4.3.1",
+        "mdi-material-ui": "^5.10.0",
+        "moment-timezone": "^0.5.21",
+        "normalizr": "^3.3.0",
+        "notistack": "^0.6.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.3",
+        "react-dom": "^16.8.3",
+        "react-redux": "^6.0.1",
+        "react-router-dom": "^4.3.1",
+        "react-testing-library": "^6.0.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.5",
+        "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.0",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.4",
+        "@liquid-labs/catalyst-theme": "^1.0.0-prototype.1",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/react-validation": "^1.0.0-prototype.0",
+        "@liquid-labs/react-viewport-context": "^1.0.0-prototype.4",
+        "@liquid-labs/react-waiter": "^1.0.0-prototype.11",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.0",
+        "@liquid-labs/validators": "^1.0.0-prototype.2",
+        "@material-ui/core": "^3.9.2",
+        "@material-ui/icons": "^3.0.2",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "lodash.camelcase": "^4.3.0",
+        "lodash.isequal": "^4.5.0",
+        "lodash.merge": "^4.6.1",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "lodash.upperfirst": "^4.3.1",
+        "mdi-material-ui": "^5.9.0",
+        "moment-timezone": "^0.5.21",
+        "normalizr": "^3.2.4",
+        "notistack": "^0.6.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.3",
+        "react-dom": "^16.8.3",
+        "react-redux": "5.x || 6.x",
+        "react-router-dom": "4.x",
+        "redux": "^4.0.0",
+        "redux-thunk": "^2.3.0"
+      },
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ],
+      "catalyst": {
+        "rollupConfig": {
+          "commonjsConfig": {
+            "namedExports": {
+              "node_modules/react/index.js": [
+                "useEffect",
+                "useState"
+              ]
+            }
+          }
+        },
+        "jestConfig": {
+          "testEnvironment": "jsdom"
+        }
+      },
+      "_catServices": [
+        {
+          "name": "react-dev-server",
+          "interface-classes": [
+            "html"
+          ],
+          "platform-types": [
+            "local"
+          ],
+          "purposes": [
+            "dev"
+          ],
+          "ctrl-scripts": [
+            "react-dev-server.sh"
+          ],
+          "params-req": [
+            "CAT_SCRIPT_CORE_UI_WEB_APP_DIR"
+          ],
+          "params-opt": []
+        }
+      ],
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-firewrap": {
+    "package": {
+      "name": "@liquid-labs/catalyst-firewrap",
+      "version": "1.0.0-prototype.1",
+      "description": "Thin client-side wrapper around Google Firebase library.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/"
+      ],
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-firewrap.git"
+      },
+      "keywords": [
+        "firebase"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-firewrap/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-firewrap#readme",
+      "dependencies": {
+        "firebase": "^5.5.1"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-make-compatible": {
+    "package": {
+      "name": "@liquid-labs/catalyst-make-compatible",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/catalyst-make-compatible.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-make-compatible/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-make-compatible#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-orgs-api": {
+    "package": {
+      "name": "@liquid-labs/catalyst-orgs-api",
+      "version": "1.0.0-prototype.2",
+      "description": "API for managing organizations (clubs, businesses, etc.)",
+      "main": "./dist/index.js",
+      "module": "./dist/index.es.js",
+      "files": [
+        "dist/",
+        "go/",
+        "data/",
+        "go.mod",
+        "go.sum",
+        ".catalyst"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-orgs-api.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-orgs-api/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-orgs-api#readme",
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ],
+      "devDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.10",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.19",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.6",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "_catalystRequiresService": [
+        {
+          "iface": "sql-mysql",
+          "params-req": [],
+          "params-opt": [],
+          "config-const": []
+        },
+        {
+          "iface": "rest",
+          "params-req": [
+            "CLOUDSQL_INSTANCE_NAME",
+            "CLOUDSQL_CONNECTION_PROT",
+            "CLOUDSQL_CONNECTION_NAME",
+            "CLOUDSQL_CREDS",
+            "CLOUDSQL_DB",
+            "CLOUDSQL_USER",
+            "CLOUDSQL_PASSWORD",
+            "GCP_PROJECT_ID",
+            "FIREBASE_DB_URL",
+            "FIREBASE_CREDS_FILE"
+          ],
+          "params-opt": [],
+          "config-const": {
+            "ADD_GO_APP_ORGS": "@liquid-labs/catalyst-orgs-api:go/app.yaml"
+          }
+        }
+      ],
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-products-api": {
+    "package": {
+      "name": "@liquid-labs/catalyst-products-api",
+      "version": "1.0.0-prototype.1",
+      "description": "Catalyst Products API is a high-level product management tool to help synchronize planning and meta-issues.",
+      "main": "./dist/index.js",
+      "module": "./dist/index.es.js",
+      "files": [
+        "dist/",
+        "go/",
+        "data/",
+        "go.mod",
+        "go.sum",
+        ".catalyst"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-products-api.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-products-api/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-products-api#readme",
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ],
+      "devDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.10",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.19",
+        "@liquid-labs/cloud-sql-proxy": "^1.0.0-alpha.0",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.6",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "_catalystRequiresService": [
+        {
+          "iface": "sql-mysql",
+          "params-req": [],
+          "params-opt": [],
+          "config-const": []
+        },
+        {
+          "iface": "rest",
+          "params-req": [
+            "CLOUDSQL_INSTANCE_NAME",
+            "CLOUDSQL_CONNECTION_PROT",
+            "CLOUDSQL_CONNECTION_NAME",
+            "CLOUDSQL_CREDS",
+            "CLOUDSQL_DB",
+            "CLOUDSQL_USER",
+            "CLOUDSQL_PASSWORD",
+            "GCP_PROJECT_ID",
+            "FIREBASE_DB_URL",
+            "FIREBASE_CREDS_FILE"
+          ],
+          "params-opt": [],
+          "config-const": {
+            "ADD_GO_APP_ORGS": "@liquid-labs/catalyst-products-api:go/app.yaml"
+          }
+        }
+      ],
+      "dependencies": {
+        "@liquid-labs/catalyst-orgs-api": "^1.0.0-prototype.1"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-scripts": {
+    "package": {
+      "name": "@liquid-labs/catalyst-scripts",
+      "version": "1.0.0-alpha.44",
+      "description": "Standard configurations and scripts useful when developing projects using Catalyst.",
+      "scripts": {
+        "prebuild": "mkdir -p ./dist && rm -rf ./dist/*",
+        "build": "bash-rollup ./src/catalyst-scripts.sh ./dist/catalyst-scripts.sh && chmod a+x ./dist/catalyst-scripts.sh",
+        "prepare": "npm run build",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "watch 'yalc push --no-force' ./src ./config",
+        "postyalc": "chmod a+x ~/.yalc/packages/@liquid-labs/catalyst-scripts/*/dist/catalyst-scripts.sh",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "files": [
+        "config/",
+        "dist/"
+      ],
+      "bin": {
+        "catalyst-scripts": "dist/catalyst-scripts.sh"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/catalyst-scripts.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-scripts/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-scripts#readme",
+      "dependencies": {
+        "@babel/cli": "^7.14.5",
+        "@babel/core": "^7.14.5",
+        "@babel/eslint-parser": "^7.14.5",
+        "@babel/plugin-proposal-class-properties": "^7.14.5",
+        "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+        "@babel/plugin-proposal-throw-expressions": "^7.14.5",
+        "@babel/plugin-transform-runtime": "^7.14.5",
+        "@babel/preset-env": "^7.14.5",
+        "@babel/preset-react": "^7.14.5",
+        "@babel/runtime": "^7.14.5",
+        "eslint": "^7.28.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-config-standard-react": "^11.0.1",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-standard": "^5.0.0",
+        "jest": "^27.0.4",
+        "npm-add-script": "^1.1.0",
+        "rollup": "^2.51.2",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-exclude-dependencies-from-bundle": "^1.1.20",
+        "rollup-plugin-node-externals": "^2.2.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-postcss": "^1.6.3",
+        "rollup-plugin-url": "^3.0.1"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "*",
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.53",
+        "watch": "^0.13.0"
+      },
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        },
+        "versionCheck": {
+          "ignore": [],
+          "options": "--skip-unused"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-sql": {
+    "package": {
+      "name": "@liquid-labs/catalyst-sql",
+      "version": "1.0.0-prototype.0",
+      "description": "Catalyst SQL management and runtime tools.",
+      "scripts": {
+        "build": "cd go && go build",
+        "prepare": "go test ./go",
+        "show-coverage": "cd go && go test -coverprofile=coverage.out && go tool cover -html=coverage.out",
+        "test": "cd go && go test"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-standards": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-theme": {
+    "package": {
+      "name": "@liquid-labs/catalyst-theme",
+      "version": "1.0.0-prototype.3",
+      "description": "Wrapper around Material UI theme for Catalyst applications (and others).",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/"
+      ],
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "start": "catalyst-scripts start",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch",
+        "prepare": "npm run build",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/catalyst-theme.git"
+      },
+      "keywords": [
+        "material-ui",
+        "react",
+        "theme"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/catalyst-theme/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/catalyst-theme#readme",
+      "dependencies": {},
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22",
+        "@material-ui/core": "^3.9.2",
+        "lodash.merge": "^4.6.1",
+        "react": "^16.8.3"
+      },
+      "peerDependencies": {
+        "@material-ui/core": "^3.9.2",
+        "lodash.merge": "^4.6.1",
+        "react": "^16.8.3"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "catalyst-users-ui": {
+    "package": {
+      "name": "@liquid-labs/catalyst-users-ui",
+      "homepage": "https://zanerock.github.io/@liquid-labs/catalyst-users",
+      "version": "1.0.0-prototype.3",
+      "description": "API and UI enabling user common user features such as login and account management.",
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "repository": "git@github.com:Liquid-Labs/catalyst-users.git",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "engines": {
+        "node": ">=8",
+        "npm": ">=5"
+      },
+      "scripts": {
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "prebuild": "rm -rf dist/* && mkdir -p dist/",
+        "build": "catalyst-scripts build",
+        "watch": "catalyst-scripts watch",
+        "prepare": "npm run build"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.6",
+        "@liquid-labs/catalyst-core-ui": "^1.0.0-prototype.5",
+        "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.1",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.17",
+        "@liquid-labs/catalyst-theme": "^1.0.0-prototype.2",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/react-waiter": "^1.0.0-prototype.11",
+        "@liquid-labs/react-validation": "^1.0.0-prototype.0",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "@liquid-labs/validators": "^1.0.0-prototype.2",
+        "@material-ui/core": "^1.5.1 || 3.x",
+        "@material-ui/icons": "^1.5.1 || 3.x",
+        "classnames": "^2.2.6",
+        "focus-trap-react": "^6.0.0",
+        "lodash.isequal": "^4.5.0",
+        "lodash.merge": "^4.6.1",
+        "lodash.omit": "^4.5.0",
+        "lodash.pick": "^4.4.0",
+        "lodash.reduce": "^4.6.0",
+        "lodash.upperfirst": "^4.3.1",
+        "prop-types": "^15.5.4",
+        "query-string": "^6.3.0",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "react-redux": "5.x || 6.x",
+        "react-router-dom": "4.x",
+        "react-sizes": "^1.0.4",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.6",
+        "@liquid-labs/catalyst-core-ui": "^1.0.0-prototype.7",
+        "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.1",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.4",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.17",
+        "@liquid-labs/catalyst-theme": "^1.0.0-prototype.2",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/react-validation": "^1.0.0-prototype.0",
+        "@liquid-labs/react-waiter": "^1.0.0-prototype.11",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "@liquid-labs/validators": "^1.0.0-prototype.2",
+        "@material-ui/core": "^3.9.3",
+        "@material-ui/icons": "^3.0.2",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "focus-trap-react": "^6.0.0",
+        "lodash.isequal": "^4.5.0",
+        "lodash.merge": "^4.6.1",
+        "lodash.omit": "^4.5.0",
+        "lodash.pick": "^4.4.0",
+        "lodash.reduce": "^4.6.0",
+        "lodash.upperfirst": "^4.3.1",
+        "mdi-material-ui": "^5.10.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "notistack": "^0.5.1",
+        "prop-types": "^15.7.2",
+        "query-string": "^6.3.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "5.x || 6.x",
+        "react-router-dom": "4.x",
+        "react-sizes": "^1.0.4",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "files": [
+        "dist/"
+      ],
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "cloud-sql-proxy": {
+    "package": {
+      "name": "@liquid-labs/cloud-sql-proxy",
+      "version": "1.0.0-alpha.0",
+      "description": "Installs Google's 'cloud_sql_proxy' via npm package.",
+      "scripts": {
+        "preinstall": "./build.sh",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "files": [
+        "build.sh"
+      ],
+      "bin": {
+        "cloud_sql_proxy": "./cloud_sql_proxy"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/cloud-sql-proxy.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/cloud-sql-proxy/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/cloud-sql-proxy#readme"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "condition-eval": {
+    "package": {
+      "name": "@liquid-labs/condition-eval",
+      "version": "1.0.0-alpha.11",
+      "description": "",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "bin/",
+        "dist/"
+      ],
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "preversion": "npm run build && npm test && npm run lint",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint:fix": "catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/condition-eval.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/condition-eval/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/condition-eval#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.36"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "contained-bash5": {
+    "package": {
+      "name": "@liquid-labs/contained-bash5",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/contained-bash5.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/contained-bash5/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/contained-bash5#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "contained-chrome": {
+    "package": {
+      "name": "@liquid-labs/contained-chrome",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "build": "make",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "dist": [
+        "dist/*"
+      ],
+      "bin": {
+        "contained-chrome": "dist/contained-chrome.sh"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/contained-chrome.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/contained-chrome/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/contained-chrome#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.5",
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.57"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "contained-core": {
+    "package": {
+      "name": "@liquid-labs/contained-core",
+      "version": "1.0.0-alpha.0",
+      "description": "Tool to manage local docker based apps and services.",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/contained-core.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/contained-core/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/contained-core#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "create-bash": {
+    "package": {
+      "name": "@liquid-labs/create-bash",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/create-bash.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/create-bash/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/create-bash#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "create-catalyst-project": {
+    "package": {
+      "name": "@liquid-labs/create-catalyst-project",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/create-catalyst-project.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/create-catalyst-project/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/create-catalyst-project#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "env": {
+    "package": {
+      "name": "@liquid-labs/env",
+      "version": "1.0.0-beta.0",
+      "description": "API extending basic environment variable access for convenience and simplicity.",
+      "scripts": {
+        "test": "catalyst-scripts test",
+        "preversion": "npm test",
+        "postversion": "git push; git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/env.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/env/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/env#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "federated-json": {
+    "package": {
+      "name": "@liquid-labs/federated-json",
+      "version": "1.0.0-alpha.18",
+      "description": "Library that builds a single JSON object from multiple JSON files.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "lint": "JS_SRC=src/lib catalyst-scripts lint",
+        "lint:fix": "JS_SRC=src/lib catalyst-scripts lint-fix",
+        "build": "JS_SRC=src/lib catalyst-scripts build && rollup-bash src/bin/fjson.sh dist/fjson.sh",
+        "prepare": "npm run build",
+        "pretest": "JS_SRC=src/lib catalyst-scripts pretest && mkdir -p test-staging/test/data/datadir && cp src/lib/test/data/*.json test-staging/test/data && cp src/lib/test/data/datadir/*.json test-staging/test/data/datadir",
+        "test": "JS_SRC=src/lib catalyst-scripts test",
+        "preversion": "JS_SRC=src npm run lint && npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "bin": {
+        "fjson": "dist/fjson.sh"
+      },
+      "files": [
+        "dist/"
+      ],
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/federated-json.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/federated-json/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/federated-json#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.42",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.36"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "flabox-professional-guide": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "flatbox-policy-legal": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "gcloud-missing-manual": {
+    "package": {
+      "name": "@liquid-labs/gcloud-missing-manual",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/gcloud-missing-manual.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/gcloud-missing-manual/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/gcloud-missing-manual#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "git-toolkit": {
+    "package": {
+      "name": "@liquid-labs/git-toolkit",
+      "version": "1.0.0-alpha.1",
+      "description": "Toolkit of git-based tools to examine git repositories.",
+      "files": [
+        "dist/"
+      ],
+      "bin": {
+        "gtk": "dist/gtk.sh"
+      },
+      "scripts": {
+        "prebuild": "command -v rollup-bash >/dev/null && rm -rf ./dist",
+        "build": "mkdir -p dist && rollup-bash ./bash/gtk.sh ./dist/gtk.sh && rollup-bash ./bash/install.sh ./dist/install.sh",
+        "watch": "watch 'npm run build' ./bash ./bin",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "pretest": "TEST_TYPES=unit catalyst-scripts pretest && mkdir -p test-tmp/ && npm run build",
+        "test": "catalyst-scripts test",
+        "posttest": "rm -rf test-tmp/",
+        "install": "./dist/install.sh",
+        "clean": "rm -rf package-lock.json node_modules/ dist/",
+        "preversion": "npm test",
+        "version": "npm run build && git add -fA dist",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build"
+      },
+      "keywords": [
+        "git",
+        "toolkit"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/git-toolkit.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/git-toolkit/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/git-toolkit#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.42",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.28",
+        "watch": "^1.0.2"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "glasp": {
+    "package": {
+      "name": "glasp",
+      "version": "0.1.0",
+      "description": "Simple command line tool combining clasp and git for Google Apps Script development.",
+      "main": "glasp.sh",
+      "bin": {
+        "glasp": "./glasp.sh"
+      },
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/glasp.git"
+      },
+      "keywords": [
+        "Apps",
+        "Script"
+      ],
+      "author": "Zane Rockenbaugh",
+      "license": "Apache-2.0",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/glasp/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/glasp#readme"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "gnu-trainer": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "go-nullable-mysql": {
+    "package": {
+      "name": "@liquid-labs/go-nullable-mysql",
+      "version": "1.0.2",
+      "description": "Enhanced support of 'NULL' values in JSON marshalling and unmarshalling for MySQL datatypes in Go.",
+      "scripts": {
+        "build": "cd nulls && go build",
+        "prepare": "cd nulls && go test all",
+        "show-coverage": "cd nulls && go test -coverprofile=coverage.out && go tool cover -html=coverage.out",
+        "test": "cd nulls && go test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/go-nullable-mysql.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/go-nullable-mysql/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/go-nullable-mysql#readme"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "go-rest": {
+    "package": {
+      "name": "@liquid-labs/go-rest",
+      "version": "1.0.0-prototype.5",
+      "description": "Toolbox for REST-ful APIs including paging, search, and standardized responses.",
+      "scripts": {
+        "build": "cd rest && go build",
+        "prepare": "go test ./rest",
+        "show-coverage": "cd nulls && go test -coverprofile=coverage.out && go tool cover -html=coverage.out",
+        "test": "cd rest && go test"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "go-search": {
+    "package": {
+      "name": "@liquid-labs/go-search",
+      "version": "1.0.0-protottype.0",
+      "description": "Library for REST-ful requests to an SQL-backed search and paging backend.",
+      "main": "index.js",
+      "scripts": {
+        "test": "cd search && go test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/go-search.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/go-search/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/go-search#readme"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "gucci-wrapper": {
+    "package": {
+      "name": "@liquid-labs/gucci-wrapper",
+      "version": "1.0.0-alpha.4",
+      "description": "A thin, NPM-aware installation wrapper around 'noqcks/gucci'.",
+      "bin": {
+        "gucci": "./bin/gucci"
+      },
+      "files": [
+        "gucci-install.sh",
+        "settings.sh"
+      ],
+      "scripts": {
+        "preinstall": "./gucci-install.sh",
+        "prepublishOnly": "! [[ -d bin ]] || mv bin tmp",
+        "prepack": "npm run prepublishOnly",
+        "postpublish": "! [[ -d tmp ]] || mv tmp bin",
+        "postpack": "npm run postpublish",
+        "test": "./test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liquid-labs/gucci-wrapper.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liquid-labs/gucci-wrapper/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liquid-labs/gucci-wrapper#readme"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "intraweb": {
+    "package": {
+      "name": "@liquid-labs/intraweb",
+      "version": "1.0.0-alpha.1",
+      "description": "Creates a secure static intraweb server using OAuth2 Proxy, gcloud, and Google authentication.",
+      "scripts": {
+        "build": "make",
+        "lint": "make lint",
+        "lint:fix": "make lint-fix",
+        "start": "echo 'WARNING: the local app is not currently set up to connect properly to cloud services and the local service is of limited testing use.' && cd src/appengine && node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "bin": {
+        "intraweb": "dist/intraweb.sh"
+      },
+      "files": [
+        "dist/*"
+      ],
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/intraweb.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/intraweb/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/intraweb#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.5",
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.57"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-authentication-api": {
+    "package": {
+      "name": "@liquid-labs/lc-authentication-api",
+      "version": "1.0.0-alpha.1",
+      "description": "Authentication API library in Go for Liquid Code + compatible projects.",
+      "main": "index.js",
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-authentication-api.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-authentication-api/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-authentication-api#readme",
+      "dependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-authorizations-model": {
+    "package": {
+      "name": "@liquid-labs/lc-authorizations-model",
+      "version": "1.0.0-alpha.0",
+      "description": "General purpose authorizations model in Go for Liquid Code + compatible projects.",
+      "main": "index.js",
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-authorizations-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-authorizations-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-authorizations-model#readme",
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "dependencies": {
+        "@liquid-labs/lc-containers-model": "^1.0.0-alpha-0",
+        "@liquid-labs/lc-entities-model": "^1.0.0-alpha.1",
+        "@liquid-labs/lc-users-model": "^1.0.0-alpha.2"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-containers-model": {
+    "package": {
+      "name": "@liquid-labs/lc-containers-model",
+      "version": "1.0.0-alpha-0",
+      "description": "A standard locations model for Liquid Code + compatible projects (in go).",
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-containers-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-containers-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-containers-model#readme",
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "file:.yalc/@liquid-labs/catalyst-scripts",
+        "@liquid-labs/lc-rdb-service": "^1.0.0-alpha.0",
+        "@liquid-labs/lc-users-model": "file:.yalc/@liquid-labs/lc-users-model",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0"
+      },
+      "dependencies": {
+        "@liquid-labs/lc-entities-model": "file:.yalc/@liquid-labs/lc-entities-model"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-entities-model": {
+    "package": {
+      "name": "@liquid-labs/lc-entities-model",
+      "version": "1.0.0-alpha.1",
+      "description": "Defines Liquid Code foundational entity component models",
+      "main": "dist/index.js",
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-entities-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-entities-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-entities-model#readme",
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "dependencies": {},
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/lc-rdb-service": "^1.0.0-alpha.2",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-locations-model": {
+    "package": {
+      "name": "@liquid-labs/lc-locations-model",
+      "version": "1.0.0-alpha.2",
+      "description": "A standard geographic location model in Go for Liquid Code + compatible projects.",
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-locations-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-locations-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-locations-model#readme",
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/lc-rdb-service": "^1.0.0-alpha.0",
+        "@liquid-labs/lc-users-model": "^1.0.0-alpha.2",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0"
+      },
+      "dependencies": {
+        "@liquid-labs/lc-entities-model": "^1.0.0-alpha.1"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-persons-api": {
+    "package": {
+      "name": "@liquid-labs/lc-persons-api",
+      "version": "1.0.0-prototype.9",
+      "description": "API for typical user, person, and account profile management.",
+      "main": "./dist/index.js",
+      "module": "./dist/index.es.js",
+      "files": [
+        "dist/",
+        "go/",
+        "data/",
+        "go.mod",
+        "go.sum",
+        ".catalyst"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-persons-api.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-persons-api/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-persons-api#readme",
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ],
+      "dependencies": {
+        "@liquid-labs/lc-persons-model": "^1.0.0-alpha.4"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.16",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.4",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.9",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "lodash.omit": "^4.5.0",
+        "lodash.reduce": "^4.6.0",
+        "moment-timezone": "^0.5.23",
+        "normalizr": "^3.3.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          },
+          {
+            "iface": "rest",
+            "params-req": [
+              "CLOUDSQL_INSTANCE_NAME",
+              "CLOUDSQL_CONNECTION_PROT",
+              "CLOUDSQL_CONNECTION_NAME",
+              "CLOUDSQL_SERVICE_ACCT",
+              "CLOUDSQL_DB",
+              "CLOUDSQL_USER",
+              "CLOUDSQL_PASSWORD",
+              "GCP_PROJECT_ID",
+              "FIREBASE_CREDS_FILE"
+            ],
+            "params-opt": [],
+            "config-const": {
+              "ADD_GO_APP_PERSONS": "@liquid-labs/lc-persons-api:go/app.yaml"
+            }
+          }
+        ]
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-persons-model": {
+    "package": {
+      "name": "@liquid-labs/lc-persons-model",
+      "version": "1.0.0-alpha.4",
+      "description": "A standard persons model in Go and JS for Liquid Code + compatible projects.",
+      "main": "./dist/index.js",
+      "module": "./dist/index.es.js",
+      "files": [
+        ".catalyst",
+        "README.md",
+        "LICENSE.txt",
+        "dist/",
+        "go/",
+        "data/"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-persons-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-persons-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-persons-model#readme",
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/lc-rdb-service": "^1.0.0-alpha.0",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0"
+      },
+      "dependencies": {
+        "@liquid-labs/lc-entities-model": "^1.0.0-alpha.1",
+        "@liquid-labs/lc-locations-model": "^1.0.0-alpha.2",
+        "@liquid-labs/lc-users-model": "^1.0.0-alpha.2"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-rdb-service": {
+    "package": {
+      "name": "@liquid-labs/lc-rdb-service",
+      "version": "1.0.0-alpha.2",
+      "description": "Simple go library to bootstrap relational database connections.",
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-rdb-service.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-rdb-service/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-rdb-service#readme",
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24"
+      },
+      "dependencies": {
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lc-users-model": {
+    "package": {
+      "name": "@liquid-labs/lc-users-model",
+      "version": "1.0.0-alpha.2",
+      "description": "A standard user model for Liquid Code + compatible projects (in go).",
+      "main": "index.js",
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/lc-users-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/lc-users-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lc-users-model#readme",
+      "catalyst": {
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "dependencies": {
+        "@liquid-labs/lc-entities-model": "^1.0.0-alpha.1"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/lc-rdb-service": "^1.0.0-alpha.2",
+        "@liquid-labs/liquid-dev-cloudsql": "^1.0.0-prototype.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq": {
+    "package": {
+      "name": "@liquid-labs/liq",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-bounties": {
+    "package": {
+      "name": "@liquid-labs/liq-bounties",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-bounties.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-bounties/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-bounties#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-cli": {
+    "package": {
+      "name": "@liquid-labs/liq-cli",
+      "version": "1.0.0-prototype.18",
+      "description": "A process aware development, testing, and deployment management tool.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "bin": {
+        "liq": "dist/liq.sh",
+        "liq-shell": "dist/liq-shell.sh"
+      },
+      "files": [
+        "dist/*"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist",
+        "build": "make all",
+        "test": "make test",
+        "install": "TERM=xterm ./dist/install.sh",
+        "lint": "JS_SRC=./src/liq catalyst-scripts lint",
+        "lint:fix": "JS_SRC=./src/liq catalyst-scripts lint-fix",
+        "clean": "rm -rf package-lock.json node_modules/ dist/",
+        "preversion": "npm test && npm run lint",
+        "version": "npm run build && git add -fA dist",
+        "postversion": "git push --tags upstream"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/liquid-labs/liq-cli.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/liquid-labs/liq-cli/issues"
+      },
+      "homepage": "https://liquid-labs.github.io/liq-cli/",
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.4",
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.56",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.42",
+        "dateformat": "^4.5.1",
+        "simple-git": "^2.40.0",
+        "yaml": "^1.10.2"
+      },
+      "liq": {
+        "orgBase": "git@github.com:liquid-labs/liquid-labs.git",
+        "packageType": "tools|libary|node",
+        "changeControl": {
+          "type": "code"
+        },
+        "versionCheck": {
+          "options": [
+            "--skip-unused"
+          ]
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": false,
+      "rebaseMergeAllowed": false
+    }
+  },
+  "liq-core": {
+    "package": {
+      "name": "@liquid-labs/liq-core",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-core.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-core/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-core#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-accounts": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-accounts",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "make"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-accounts.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-accounts/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-accounts#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.42"
+      },
+      "dependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.20"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-agreements": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-agreements",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "make",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-agreements.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-agreements/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-agreements#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.42"
+      },
+      "dependencies": {
+        "@liquid-labs/gucci-wrapper": "^1.0.0-alpha.2"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audit-accounts": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audit-accounts",
+      "version": "1.0.0-alpha.1",
+      "description": "liq extensions support auditting of company owned third party accounts",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "pretest": "JS_SRC=src/audits catalyst-scripts pretest",
+        "test": "JS_SRC=src/audits catalyst-scripts test",
+        "build": "make",
+        "preversion": "npm test && npm run lint",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build",
+        "lint": "JS_SRC=src/audits catalyst-scripts lint",
+        "lint:fix": "JS_SRC=src/audits catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audit-accounts.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audit-accounts/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audit-accounts#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "dependencies": {
+        "@liquid-labs/liq-ext-audit-roles-lib": "^1.0.0-alpha.2",
+        "@liquid-labs/orgs-model": "^1.0.0-beta.21",
+        "shelljs": "^0.8.4"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.42",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.32"
+      },
+      "peerDependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-alpha.9"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audit-devices": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audit-devices",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audit-devices.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audit-devices/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audit-devices#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audit-roles": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audit-roles",
+      "version": "1.0.0-alpha.2",
+      "description": "",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "pretest": "JS_SRC=src/audits catalyst-scripts pretest",
+        "test": "JS_SRC=src/audits catalyst-scripts test && npm run lint",
+        "build": "make",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build",
+        "lint": "JS_SRC=src/audits catalyst-scripts lint",
+        "lint:fix": "JS_SRC=src/audits catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audit-roles.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audit-roles/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audit-roles#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.42",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.33"
+      },
+      "dependencies": {
+        "@liquid-labs/liq-ext-audit-roles-lib": "^1.0.0-alpha.2",
+        "shelljs": "^0.8.4"
+      },
+      "peerDependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-alpha.9"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audit-roles-lib": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audit-roles-lib",
+      "version": "1.0.0-alpha.2",
+      "description": "Support library for audit tests and liq-ext-audit-roles in particular.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "pretest": "JS_SRC=src catalyst-scripts pretest",
+        "test": "JS_SRC=src catalyst-scripts test",
+        "build": "make",
+        "preversion": "npm test && npm run lint",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build",
+        "lint": "JS_SRC=src catalyst-scripts lint",
+        "lint:fix": "JS_SRC=src catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audit-roles-lib.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audit-roles-lib/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audit-roles-lib#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.33"
+      },
+      "peerDependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-alpha.9"
+      },
+      "dependencies": {
+        "shelljs": "^0.8.4"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audit-self": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audit-self",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audit-self.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audit-self/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audit-self#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audit-staff": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audit-staff",
+      "version": "1.0.0-alpha.4",
+      "description": "Implements staff audit plugins.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/ && catalyst-scripts build",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audit-staff.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audit-staff/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audit-staff#readme",
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.41",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.28",
+        "@liquid-labs/liq-ext-roles": "^1.0.0-alpha.4",
+        "dotenv": "^8.2.0"
+      },
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      },
+      "dependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.3"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audit-vendors": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audit-vendors",
+      "version": "1.0.0-alpha.0",
+      "description": "liq extension enabling audit of product/vendor records",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "pretest": "JS_SRC=src/audits catalyst-scripts pretest",
+        "test": "JS_SRC=src/audits catalyst-scripts test",
+        "build": "make",
+        "preversion": "npm test && npm run lint",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build",
+        "lint": "JS_SRC=src/audits catalyst-scripts lint",
+        "lint:fix": "JS_SRC=src/audits catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audit-vendors.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audit-vendors/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audit-vendors#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "*",
+        "@liquid-labs/catalyst-scripts": "*"
+      },
+      "peerDependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-alpha.10"
+      },
+      "dependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.32",
+        "@liquid-labs/policies-model": "^1.0.0-alpha.10"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-audits": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-audits",
+      "version": "1.0.0-alpha.7",
+      "description": "liq extension providing general audit support.",
+      "main": "bin/gen-compliance-docs.js",
+      "module": "bin/gen-compliance-docs.es.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "make",
+        "postversion": "git push && git push --tags"
+      },
+      "bin": {
+        "gen-compliance-docs": "bin/gen-compliance-docs",
+        "liq-gen-audit-db": "bin/liq-gen-audit-db.sh"
+      },
+      "files": [
+        "dist/*",
+        "bin/*"
+      ],
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-audits.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-audits/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-audits#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.5",
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.57",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.28"
+      },
+      "dependencies": {
+        "@liquid-labs/federated-json": "^1.0.0-alpha.17",
+        "@liquid-labs/orgs-model": "^1.0.0-beta.31",
+        "@liquid-labs/policies-model": "file:.yalc/@liquid-labs/policies-model",
+        "ajv-cli": "^4.0.1",
+        "dotenv": "^8.2.0",
+        "tsv": "^0.2.0"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-data": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-data",
+      "version": "1.0.0-alpha.0",
+      "description": "liq extension for managing data sets.",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-data.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-data/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-data#readme",
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.37"
+      },
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-hr": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-hr",
+      "version": "1.0.0-alpha.6",
+      "description": "liq extension for staff management.",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-hr.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-hr/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-hr#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      },
+      "dependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.38"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.37"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-inventories": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-inventories",
+      "version": "1.0.0-alpha.0",
+      "description": "Base package for general inventory tracking functions.",
+      "main": "index.js",
+      "scripts": {
+        "build": "make",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-inventories.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-inventories/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-inventories#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "dependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.37",
+        "jsonata": "^1.8.4"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "*"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-keys": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-keys",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-keys.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-keys/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-keys#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.37"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-policy": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-policy",
+      "version": "1.0.0-alpha.4",
+      "description": "",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/ && catalyst-scripts build",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-policy.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-policy/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-policy#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.37",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.27"
+      },
+      "dependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.3"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-projects-releases": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-projects-releases",
+      "version": "1.0.0-alpha.1",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "build": "make",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-projects-releases.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-projects-releases/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-projects-releases#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.6"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-roles": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-roles",
+      "version": "1.0.0-alpha.5",
+      "description": "",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/ && catalyst-scripts build",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-roles.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-roles/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-roles#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.40",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.28"
+      },
+      "dependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.3",
+        "dotenv": "^8.2.0"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-runtime": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-runtime",
+      "version": "1.0.0-alpha.0",
+      "description": "liq extension for manaing cloud and local runtime environments and services.",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-runtime.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-runtime/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-runtime#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.37"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-soc2": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-soc2",
+      "version": "1.0.0-alpha.7",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "preversion": "npm run build",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-soc2.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-soc2/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-soc2#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.42"
+      },
+      "dependencies": {
+        "@liquid-labs/policy-soc2-data": "^1.0.0-alpha.10",
+        "shelljs": "^0.8.4"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-tasks": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-tasks",
+      "version": "1.0.0-alpha.0",
+      "description": "liq extension for task and issue management",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "mkdir -p dist && rollup-bash ./bash/inc.sh ./dist/ext.sh && cp bash/comp.sh dist/"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-tasks.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-tasks/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-tasks#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "code"
+        }
+      },
+      "dependencies": {
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.37"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liq-ext-vendors": {
+    "package": {
+      "name": "@liquid-labs/liq-ext-vendors",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/liq-ext-vendors.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liq-ext-vendors/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liq-ext-vendors#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "*"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liquid-dev-cloudsql": {
+    "package": {
+      "name": "@liquid-labs/liquid-dev-cloudsql",
+      "version": "1.0.0-prototype.0",
+      "description": "Google CloudSQL management scripts for Liquid Dev projects.",
+      "files": [
+        "bin/",
+        "LICENSE.txt",
+        "README.md"
+      ],
+      "bin": {
+        "cloud-sql-proxy.sh": "./bin/cloud-sql-proxy.sh",
+        "cloud-sql-service.sh": "./bin/cloud-sql-service.sh"
+      },
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/liquid-dev-cloudsql.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/liquid-dev-cloudsql/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/liquid-dev-cloudsql#readme",
+      "catalyst": {
+        "provides": [
+          {
+            "name": "cloud-sql-service",
+            "interface-classes": [
+              "sql"
+            ],
+            "platform-types": [
+              "local",
+              "gcp"
+            ],
+            "purposes": [
+              "dev",
+              "test",
+              "pre-production",
+              "production"
+            ],
+            "ctrl-scripts": [
+              "cloud-sql-proxy.sh",
+              "cloud-sql-service.sh"
+            ],
+            "params-req": [
+              "GCP_PROJECT_ID",
+              "CLOUDSQL_INSTANCE_NAME",
+              "CLOUDSQL_CONNECTION_PROT",
+              "CLOUDSQL_CONNECTION_NAME",
+              "CLOUDSQL_PROXY_CONNECTION_NAME",
+              "CLOUDSQL_SERVICE_ACCT",
+              "CLOUDSQL_USER",
+              "CLOUDSQL_PASSWORD",
+              "CLOUDSQL_DB"
+            ],
+            "params-opt": [],
+            "config-const": {}
+          }
+        ],
+        "requires": [
+          {
+            "iface": "sql",
+            "params-req": [],
+            "params-opt": [],
+            "config-const": []
+          }
+        ]
+      },
+      "dependencies": {
+        "@liquid-labs/cloud-sql-proxy": "^1.0.0-alpha.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "Liquid-Labs": {
+    "package": {
+      "name": "@liquid-labs/Liquid-Labs",
+      "version": "1.0.0-beta.1",
+      "description": "Liquid Labs public info.",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile --silent",
+        "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && make -f .build/main.makefile --silent"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/Liquid-Labs.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/Liquid-Labs/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/Liquid-Labs#readme",
+      "optionalDependencies": {
+        "@liquid-labs/policy-core": "^1.0.0-alpha.7",
+        "@liquid-labs/policy-devops": "^1.0.0-alpha.16"
+      },
+      "dependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-beta.25"
+      },
+      "liquidDev": {
+        "changeControl": {
+          "type": "org"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "Liquid-Labs-internal": {
+    "package": {
+      "name": "@liquid-labs/org_settings_sensitive",
+      "version": "1.0.0-beta.0",
+      "description": "Liquid Labs policy and other sensitive information.",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/org_settings_sensitive.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/org_settings_sensitive/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/org_settings_sensitive#readme",
+      "optionalDependencies": {
+        "@liquid-labs/policy-core": "^1.0.0-alpha.1"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "Liquid-Template-Issues": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "liquid-labs.com": {
+    "package": null,
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": false,
+      "rebaseMergeAllowed": false
+    }
+  },
+  "liquid-policy": {
+    "package": null,
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "lock-and-key": {
+    "package": {
+      "name": "@liquid-labs/lock-and-key",
+      "version": "0.0.4",
+      "description": "A simple open/closed semaphore for asynchronous coordination.",
+      "main": "dist/index.js",
+      "files": [
+        "dist/",
+        "README.md"
+      ],
+      "scripts": {
+        "build": "babel --source-maps inline src -d dist",
+        "start": "babel --watch --source-maps inline src -d dist",
+        "prepublishOnly": "rm -rf dist && babel src -d dist && find dist -name '*.test.js' | xargs rm",
+        "pretest": "babel --source-maps inline src -d dist",
+        "test": "jest --coverage dist"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@gitlab.com/liquidlabs/lock-and-key.git"
+      },
+      "keywords": [
+        "semaphore",
+        "binary-semaphore",
+        "gate",
+        "lock"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "git@github.com:Liquid-Labs/lock-and-key.git"
+      },
+      "homepage": "https://github.com/Liquid-Labs/lock-and-key#readme",
+      "devDependencies": {
+        "@babel/cli": "^7.1.0",
+        "@babel/core": "^7.1.0",
+        "@babel/preset-env": "^7.1.0",
+        "jest": "^23.6.0"
+      },
+      "dependencies": {
+        "core-js": "^2.5.7"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "moca-policy-mirror": {
+    "package": {
+      "name": "@moca/moca-financial-policy",
+      "version": "1.0.0-alpha.7",
+      "description": "MOCA Financial policy repository.",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "npm run build:data && npm run build:refresh",
+        "build:policy": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile --silent",
+        "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && STAFF_FILE=${HOME}/.liq/playground/moca/moca-financial/staff.json make -f .build/main.makefile --silent roles-ref && make -f .build/main.makefile --silent all",
+        "build:data": "npm run build:data:roles && npm run build:data:audits",
+        "build:data:roles": "./bin/gen-data.sh",
+        "build:data:audits": "$(cd ${HOME}/.liq/exts && npm bin)/liq-gen-audit-db",
+        "install": "npm run build:data",
+        "deploy": "intraweb deploy --no-deploy-app --site policy.mocapay.com"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/mocafinancial/MOCA_Financial-policy.git"
+      },
+      "bugs": {
+        "url": "https://github.com/mocafinancial/moca-financial-policy/issues"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.47",
+        "@liquid-labs/policies-model": "^1.0.0-alpha.12",
+        "@liquid-labs/policy-audio-video": "^1.0.0-alpha.0",
+        "@liquid-labs/policy-cloud": "^1.0.0-alpha.5",
+        "@liquid-labs/policy-cloud-aws": "^1.0.0-alpha.3",
+        "@liquid-labs/policy-compute": "^1.0.0-alpha.2",
+        "@liquid-labs/policy-compute-aws": "^1.0.0-alpha.6",
+        "@liquid-labs/policy-core": "^1.0.0-alpha.46",
+        "@liquid-labs/policy-data": "^1.0.0-alpha.9",
+        "@liquid-labs/policy-data-aws": "^1.0.0-alpha.3",
+        "@liquid-labs/policy-devices": "^1.0.0-alpha.7",
+        "@liquid-labs/policy-devops": "^1.0.0-alpha.24",
+        "@liquid-labs/policy-hosts": "^1.0.0-alpha.9",
+        "@liquid-labs/policy-incident-response": "^1.0.0-alpha.4",
+        "@liquid-labs/policy-networks": "^1.0.0-alpha.15",
+        "@liquid-labs/policy-networks-aws": "^1.0.0-alpha.11",
+        "@liquid-labs/policy-networks-cisco": "^1.0.0-alpha.3",
+        "@liquid-labs/policy-networks-vertiv": "^1.0.0-alpha.1",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.23",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.44",
+        "@liquid-labs/policy-security-aws": "^1.0.0-alpha.4",
+        "@liquid-labs/policy-soc2": "^1.0.0-alpha.6",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.19",
+        "@liquid-labs/policy-support": "^1.0.0-alpha.3",
+        "@liquid-labs/policy-vendors": "^1.0.0-alpha.6",
+        "@liquid-labs/policy-wireless": "^1.0.0-alpha.1"
+      },
+      "liq": {
+        "orgBase": "git@github.com:mocafinancial/moca-financial-policy.git",
+        "changeControl": {
+          "type": "code"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "mui-extensions": {
+    "package": {
+      "name": "@liquid-labs/mui-extensions",
+      "version": "1.0.0-prototype.1",
+      "description": "Useful UI components building off Material UI.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "/dist"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "prepare": "npm run build",
+        "pretest": "TEST_TYPES=unit catalyst-scripts pretest",
+        "test": "TEST_TYPES=unit catalyst-scripts test",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/mui-extensions.git"
+      },
+      "keywords": [
+        "material-ui",
+        "ui",
+        "react-component",
+        "material"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/mui-extensions/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/mui-extensions#readme",
+      "peerDependencies": {
+        "@liquid-labs/react-viewport-context": "^1.0.0-prototype.3",
+        "@material-ui/core": "1.x || 3.x",
+        "@material-ui/icons": "1.x || 3.x",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "prop-types": "^15.6.2",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "recompose": "0.30.0"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.21",
+        "@liquid-labs/react-viewport-context": "^1.0.0-prototype.4",
+        "@material-ui/core": "^3.9.3",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-testing-library": "^6.1.2"
+      },
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ],
+      "dependencies": {},
+      "catalyst": {
+        "jestConfig": {
+          "testEnvironment": "jsdom"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "mui-two-tone": {
+    "package": {
+      "name": "@liquid-labs/mui-two-tone",
+      "version": "1.0.0-prototype.1",
+      "description": "A Catalyst theme implementing a simple, two-tone theme.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/"
+      ],
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "start": "catalyst-scripts start",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch",
+        "prepare": "npm run build",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/mui-two-tone.git"
+      },
+      "keywords": [
+        "material-ui",
+        "react",
+        "theme"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/mui-two-tone/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/mui-two-tone#readme",
+      "dependencies": {},
+      "devDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.11",
+        "@liquid-labs/catalyst-core-ui": "^1.0.0-prototype.8",
+        "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.2",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.6",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22",
+        "@liquid-labs/catalyst-theme": "^1.0.0-prototype.2",
+        "@liquid-labs/catalyst-users-ui": "^1.0.0-prototype.2",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/react-validation": "^1.0.0-prototype.1",
+        "@liquid-labs/react-waiter": "^1.0.0-prototype.11",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "@material-ui/core": "^3.9.3",
+        "@material-ui/icons": "^3.0.2",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "lodash.isequal": "^4.5.0",
+        "lodash.merge": "^4.6.1",
+        "lodash.omit": "^4.5.0",
+        "lodash.pick": "^4.4.0",
+        "lodash.reduce": "^4.6.0",
+        "lodash.upperfirst": "^4.3.1",
+        "mdi-material-ui": "^5.11.0",
+        "moment-timezone": "^0.5.25",
+        "normalizr": "^3.3.0",
+        "notistack": "^0.8.2",
+        "query-string": "^6.5.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.0.3",
+        "react-router-dom": "^5.0.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.11",
+        "@liquid-labs/catalyst-core-ui": "^1.0.0-prototype0",
+        "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.2",
+        "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.6",
+        "@liquid-labs/catalyst-theme": "^1.0.0-prototype.2",
+        "@liquid-labs/catalyst-users-ui": "^1.0.0-prototype.2",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/react-validation": "^1.0.0-prototype.1",
+        "@liquid-labs/react-waiter": "^1.0.0-prototype.11",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "@material-ui/core": "^3.9.3",
+        "@material-ui/icons": "^3.0.2",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "lodash.isequal": "^4.5.0",
+        "lodash.merge": "^4.6.1",
+        "lodash.omit": "^4.5.0",
+        "lodash.pick": "^4.4.0",
+        "lodash.reduce": "^4.6.0",
+        "lodash.upperfirst": "^4.3.1",
+        "mdi-material-ui": "^5.11.0",
+        "moment-timezone": "^0.5.25",
+        "normalizr": "^3.3.0",
+        "notistack": "^0.8.2",
+        "query-string": "^6.5.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.0.3",
+        "react-router-dom": "^5.0.0",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "orgs-model": {
+    "package": {
+      "name": "@liquid-labs/orgs-model",
+      "version": "1.0.0-beta.47",
+      "description": "Liquid organizations model.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "bin/",
+        "dist/"
+      ],
+      "bin": {
+        "liq-init-docs": "bin/liq-init-docs.pl",
+        "liq-gen-glossary": "dist/liq-gen-glossary.sh",
+        "liq-gen-make": "bin/liq-gen-make.pl",
+        "liq-settings-conv": "bin/liq-settings-conv.pl",
+        "liq-refs-gen": "bin/liq-refs-gen.pl",
+        "liq-proj-mapper": "bin/liq-proj-mapper.sh",
+        "liq-standards-filter-abs": "bin/liq-standards-filter-abs.sh",
+        "liq-tsv2md": "bin/liq-tsv2md.pl"
+      },
+      "scripts": {
+        "build": "catalyst-scripts build && make",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "preversion": "npm test && npm run lint",
+        "postversion": "git push --tags upstream",
+        "lint": "catalyst-scripts lint",
+        "lint:fix": "catalyst-scripts lint-fix"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/orgs-model.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/orgs-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/orgs-model#readme",
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.5",
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.52",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.38"
+      },
+      "dependencies": {
+        "@liquid-labs/condition-eval": "^1.0.0-alpha.11",
+        "@liquid-labs/federated-json": "^1.0.0-alpha.18",
+        "@liquid-labs/gucci-wrapper": "^1.0.0-alpha.3",
+        "dotenv": "^10.0.0",
+        "fs": "^0.0.2"
+      },
+      "liquidDev": {
+        "changeControl": {
+          "type": "code"
+        }
+      },
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "packageType": "tools|libary|node",
+        "versionCheck": {
+          "ignore": [
+            "@babel/runtime"
+          ],
+          "options": [
+            "--skip-unused"
+          ]
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policies-model": {
+    "package": {
+      "name": "@liquid-labs/policies-model",
+      "version": "1.0.0-alpha.12",
+      "description": "Liquid policies model.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "bin/",
+        "dist/"
+      ],
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "preversion": "npm test && npm run lint",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint:fix": "catalyst-scripts lint-fix"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policies-model.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policies-model/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policies-model#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.38"
+      },
+      "dependencies": {
+        "@liquid-labs/federated-json": "^1.0.0-alpha.18",
+        "@liquid-labs/orgs-model": "^1.0.0-beta.33",
+        "tsv": "^0.2.0"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-accounts": {
+    "package": {
+      "name": "@liquid-labs/policy-accounts",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-accounts.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-accounts/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-accounts#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-audio-video": {
+    "package": {
+      "name": "@liquid-labs/policy-audio-video",
+      "version": "1.0.0-alpha.0",
+      "description": "Liquid Policy component for audio/video procedures.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-audio-video.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-audio-video/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-audio-video#readme",
+      "devDependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-beta.30"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-cards": {
+    "package": {
+      "name": "@liquid-labs/policy-cards",
+      "version": "1.0.0-alpha.1",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-cards.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-cards/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-cards#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "policy"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-cloud": {
+    "package": {
+      "name": "@liquid-labs/policy-cloud",
+      "version": "1.0.0-alpha.5",
+      "description": "Liquid Policy component for cloud services.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-cloud.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-cloud/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-cloud#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "policy"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.21",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.41",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.16"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-cloud-aws": {
+    "package": {
+      "name": "@liquid-labs/policy-cloud-aws",
+      "version": "1.0.0-alpha.3",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-cloud-aws.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-cloud-aws/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-cloud-aws#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.11",
+        "@liquid-labs/policy-cloud": "^1.0.0-alpha.2",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.2",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.35",
+        "@liquid-labs/policy-security-aws": "^1.0.0-alpha.2"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-code": {
+    "package": {
+      "name": "@liquid-labs/policy-code",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-code.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-code/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-code#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-compliance-data": {
+    "package": {
+      "name": "@liquid-labs/policy-compliance-data",
+      "version": "1.0.0-alpha.5",
+      "description": "General Liquid Policy compliance ",
+      "scripts": {
+        "test": "ajv compile -s schema.json",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-compliance-data.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-compliance-data/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-compliance-data#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-compliance-law-tx-data": {
+    "package": {
+      "name": "@liquid-labs/policy-compliance-law-tx-data",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-compliance-law-tx-data.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-compliance-law-tx-data/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-compliance-law-tx-data#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-compute": {
+    "package": {
+      "name": "@liquid-labs/policy-compute",
+      "version": "1.0.0-alpha.2",
+      "description": "Liquid Policy compute component.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-compute.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-compute/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-compute#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.11",
+        "@liquid-labs/policy-host": "^1.0.0-alpha.4",
+        "@liquid-labs/policy-networks": "^1.0.0-alpha.10",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.2"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-compute-aws": {
+    "package": {
+      "name": "@liquid-labs/policy-compute-aws",
+      "version": "1.0.0-alpha.6",
+      "description": "Liquid Policy AWS Compute component.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-compute-aws.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-compute-aws/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-compute-aws#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46",
+        "@liquid-labs/policy-compute": "^1.0.0-alpha.2",
+        "@liquid-labs/policy-hosts": "^1.0.0-alpha.9",
+        "@liquid-labs/policy-networks": "^1.0.0-alpha.14",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.22",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.42",
+        "@liquid-labs/policy-security-aws": "^1.0.0-alpha.4",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.19"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-core": {
+    "package": {
+      "name": "@liquid-labs/policy-core",
+      "version": "1.0.0-alpha.46",
+      "description": "Standard 'roles' definitions compatible with Liquid Policy.",
+      "main": "bin/gen-roles-ref.js",
+      "module": "bin/gen-roles-ref.es.js",
+      "bin": {
+        "md2x": "bin/md2x",
+        "liq-gen-roles-ref": "bin/liq-gen-roles-ref.sh"
+      },
+      "scripts": {
+        "build": "make",
+        "test": "make test",
+        "preversion": "make all && make qa",
+        "postversion": "git push upstream v${npm_package_version}",
+        "lint": "make lint",
+        "lint:fix": "catalyst-scripts lint-fix"
+      },
+      "files": [
+        "dist/",
+        "policy"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/liquid-labs/policy-core.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/liquid-labs/policy-core/issues"
+      },
+      "homepage": "https://github.com/liquid-labs/policy-core#readme",
+      "devDependencies": {
+        "@liquid-labs/bash-rollup": "^1.0.0-alpha.4+0fedf46f",
+        "@liquid-labs/bash-toolkit": "^1.0.0-alpha.50",
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.39",
+        "@liquid-labs/orgs-model": "^1.0.0-beta.44",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.21"
+      },
+      "dependencies": {
+        "fs": "^0.0.2"
+      },
+      "liq": {
+        "orgBase": "git@github.com:liquid-labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "policy"
+        },
+        "versionCheck": {
+          "ignore": [
+            "@babel/runtime"
+          ],
+          "options": [
+            "--skip-unused"
+          ]
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-coronavirus": {
+    "package": {
+      "name": "@liquid-labs/coronavirus-home-lockdown",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile --silent",
+        "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && make -f .build/main.makefile --silent"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/coronavirus-home-lockdown.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/coronavirus-home-lockdown/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/coronavirus-home-lockdown#readme",
+      "dependencies": {
+        "@liquid-labs/policies-model": "file:.yalc/@liquid-labs/policies-model",
+        "@liquid-labs/policy-home-lockdown": "file:.yalc/@liquid-labs/policy-home-lockdown"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-data": {
+    "package": {
+      "name": "@liquid-labs/policy-data",
+      "version": "1.0.0-alpha.9",
+      "description": "Liquid Policy to deal with sensitive data handling.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-data.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-data/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-data#readme",
+      "liquidDev": {
+        "changeControl": {
+          "type": "policy"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.10"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-data-aws": {
+    "package": {
+      "name": "@liquid-labs/policy-data-aws",
+      "version": "1.0.0-alpha.3",
+      "description": "Liquid Policy component for AWS data services.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-data-aws.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-data-aws/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-data-aws#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.10",
+        "@liquid-labs/policy-data": "^1.0.0-alpha.5",
+        "@liquid-labs/policy-networks": "^1.0.0-alpha.14",
+        "@liquid-labs/policy-networks-aws": "^1.0.0-alpha.11",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.22",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.42",
+        "@liquid-labs/policy-security-aws": "^1.0.0-alpha.3",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.19"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-devices": {
+    "package": {
+      "name": "@liquid-labs/policy-devices",
+      "version": "1.0.0-alpha.7",
+      "description": "Liquid Policy dealing with end-user computing devices.",
+      "scripts": {
+        "test": "./test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-devices.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-devices/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-devices#readme",
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.6",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.6"
+      },
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "policy"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-devops": {
+    "package": {
+      "name": "@liquid-labs/policy-devops",
+      "version": "1.0.0-alpha.24",
+      "description": "Liquid Policy component dealing with software development and operations.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/policy-devops.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-devops/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-devops#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "policy"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.21"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-formation": {
+    "package": {
+      "name": "@liquid-labs/policy-formation",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-formation.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-formation/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-formation#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-home-lockdown": {
+    "package": {
+      "name": "@liquid-labs/policy-home-lockdown",
+      "version": "1.0.0-alpha.1",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-home-lockdown.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-home-lockdown/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-home-lockdown#readme",
+      "dependencies": {},
+      "devDependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-beta.30"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-hosts": {
+    "package": {
+      "name": "@liquid-labs/policy-hosts",
+      "version": "1.0.0-alpha.9",
+      "description": "Liquid Policy component for host policies.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-hosts.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-hosts/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-hosts#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "policy"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.21",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.41",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.16"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-incident-response": {
+    "package": {
+      "name": "@liquid-labs/policy-incident-response",
+      "version": "1.0.0-alpha.4",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-incident-response.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-incident-response/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-incident-response#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-marketing": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-network-standards": {
+    "package": {
+      "name": "@liquid-labs/policy-network-standards",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-network-standards.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-network-standards/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-network-standards#readme"
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-networks": {
+    "package": {
+      "name": "@liquid-labs/policy-networks",
+      "version": "1.0.0-alpha.15",
+      "description": "Liquid Policy component dealing with core network policies.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-network-standards.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-networks/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-networks#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.23",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.42",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.16"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-networks-aws": {
+    "package": {
+      "name": "@liquid-labs/policy-networks-aws",
+      "version": "1.0.0-alpha.11",
+      "description": "Liquid Policy component dealing with AWS network management.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-networks-aws.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-networks-aws/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-networks-aws#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46",
+        "@liquid-labs/policy-networks": "^1.0.0-alpha.14",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.22",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.42",
+        "@liquid-labs/policy-security-aws": "^1.0.0-alpha.4",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.16"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-networks-cisco": {
+    "package": {
+      "name": "@liquid-labs/policy-networks-cisco",
+      "version": "1.0.0-alpha.3",
+      "description": "Liquid Policy component for the Cisco 4000 ISR product line.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-networks-cisco.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-networks-cisco/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-networks-cisco#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.9",
+        "@liquid-labs/policy-networks": "^1.0.0-alpha.14",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.22",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.19"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-networks-vertiv": {
+    "package": {
+      "name": "@liquid-labs/policy-networks-vertiv",
+      "version": "1.0.0-alpha.1",
+      "description": "Liquid Labs Policy component dealing with Vertiv equipment.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-networks-vertiv.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-networks-vertiv/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-networks-vertiv#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.9",
+        "@liquid-labs/policy-networks": "^1.0.0-alpha.6",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.1"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-projects": {
+    "package": {
+      "name": "@liquid-labs/policy-projects",
+      "version": "1.0.0-alpha.23",
+      "description": "Liquid Policy component dealing with general projects, change control, and release.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-projects.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-projects/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-projects#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-release": {
+    "package": {
+      "name": "@liquid-labs/policy-release",
+      "version": "1.0.0-alpha.0",
+      "description": "Liquid Policy component dealing with software release management.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-release.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-release/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-release#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.10"
+      },
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-security": {
+    "package": {
+      "name": "@liquid-labs/policy-security",
+      "version": "1.0.0-alpha.44",
+      "description": "Liquid Policy component dealing with general security.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/policy-security.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-security/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-security#readme",
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.44",
+        "@liquid-labs/policy-incident-response": "^1.0.0-alpha.1",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.22",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.19"
+      },
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git",
+        "changeControl": {
+          "type": "policy"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-security-aws": {
+    "package": {
+      "name": "@liquid-labs/policy-security-aws",
+      "version": "1.0.0-alpha.4",
+      "description": "Liquid Policy security general components as pertains to AWS.",
+      "scripts": {
+        "build": "make",
+        "test": "make test",
+        "test:cloud": "make test:cloud",
+        "test:policy": "make test:policy",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-security-aws.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-security-aws/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-security-aws#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.46",
+        "@liquid-labs/policy-projects": "^1.0.0-alpha.22",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.42",
+        "@liquid-labs/policy-staff": "^1.0.0-alpha.19"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-security-google": {
+    "package": {
+      "name": "@liquid-labs/policy-security-google",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-security-google.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-security-google/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-security-google#readme",
+      "liq": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-soc2": {
+    "package": {
+      "name": "@liquid-labs/policy-soc2",
+      "version": "1.0.0-alpha.6",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "npm run build",
+        "build": "make",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-soc2.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-soc2/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-soc2#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "@liquid-labs/liq-ext-audits": "^1.0.0-alpha.7",
+        "@liquid-labs/policy-soc2-data": "^1.0.0-alpha.10"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-soc2-data": {
+    "package": {
+      "name": "@liquid-labs/policy-soc2-data",
+      "version": "1.0.0-alpha.10",
+      "description": "SOC 2 Type I and Type II specifications in liq compliance format.",
+      "scripts": {
+        "build": "make",
+        "test": "make && npm run test:typeI && npm run test:typeII",
+        "test:typeI": "ajv -s $(npm explore @liquid-labs/policy-compliance-data -- pwd)/schema.json -d soc-2-type-i.compliance.json --errors=text",
+        "test:typeII": "ajv -s $(npm explore @liquid-labs/policy-compliance-data -- pwd)/schema.json -d soc-2-type-ii.compliance.json --errors=text",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build"
+      },
+      "files": [
+        "*.compliance.json"
+      ],
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-soc2-data.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-soc2-data/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-soc2-data#readme",
+      "liquidDev": {
+        "orgBase": "git@github.com:Liquid-Labs/Liquid-Labs.git"
+      },
+      "devDependencies": {
+        "ajv-cli": "^4.0.1",
+        "rfc6902": "^4.0.1"
+      },
+      "dependencies": {
+        "@liquid-labs/policy-compliance-data": "^1.0.0-alpha.5"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-staff": {
+    "package": {
+      "name": "@liquid-labs/policy-staff",
+      "version": "1.0.0-alpha.19",
+      "description": "Liquid Policy component dealing with hiring and staff.",
+      "scripts": {
+        "test": "./test/test.sh",
+        "preversion": "npm test",
+        "postversion": "git push upstream v${npm_package_version}"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-staff.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-staff/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-staff#readme",
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.41"
+      },
+      "peerDependencies": {
+        "@liquid-labs/policy-security": "^1.0.0-alpha.3"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-support": {
+    "package": {
+      "name": "@liquid-labs/policy-support",
+      "version": "1.0.0-alpha.3",
+      "description": "Standard liq policy package for customer support.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-support.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-support/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-support#readme",
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.1"
+      },
+      "dependencies": {
+        "@liquid-labs/policy-audio-video": "^1.0.0-alpha.0"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-toolkit": {
+    "package": {
+      "name": "@liquid-labs/policy-toolkit",
+      "version": "1.0.0-alpha.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-toolkit.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-toolkit/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-toolkit#readme"
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-vendors": {
+    "package": {
+      "name": "@liquid-labs/policy-vendors",
+      "version": "1.0.0-alpha.6",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test.sh",
+        "preversion": "npm test",
+        "postversion": "git push --tags upstream"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-vendors.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-vendors/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-vendors#readme",
+      "liquidDev": {
+        "changeControl": {
+          "type": "policy"
+        }
+      },
+      "devDependencies": {
+        "@liquid-labs/orgs-model": "^1.0.0-beta.21",
+        "@liquid-labs/policy-core": "^1.0.0-alpha.26"
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "policy-wireless": {
+    "package": {
+      "name": "@liquid-labs/policy-wireless",
+      "version": "1.0.0-alpha.2",
+      "description": "Liquid Policy for wireless networks.",
+      "main": "index.js",
+      "scripts": {
+        "test": "./test.sh",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags"
+      },
+      "keywords": [],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/policy-wireless.git"
+      },
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/policy-wireless/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/policy-wireless#readme",
+      "devDependencies": {
+        "@liquid-labs/policies-model": "^1.0.0-beta.30",
+        "@liquid-labs/policy-security": "^1.0.0-alpha.13"
+      },
+      "liquidDev": {
+        "changeControl": {
+          "type": "policy"
+        }
+      }
+    },
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "product-planning": {
+    "package": null,
+    "repository": {
+      "isPrivate": true,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "react-validation": {
+    "package": {
+      "name": "@liquid-labs/react-validation",
+      "version": "1.0.0-prototype.2",
+      "description": "Provides ValidForm and ValidInput components, which add validation to Material UI components.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/"
+      ],
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "prepare": "npm run build && npm run lint",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/react-validation.git"
+      },
+      "keywords": [
+        "validation",
+        "react"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/react-validation/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/react-validation#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.16",
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.2",
+        "@liquid-labs/validators": "^1.0.0-prototype.2",
+        "@material-ui/core": "^3.9.2",
+        "@material-ui/icons": "^3.0.2",
+        "classnames": "^2.2.6",
+        "lodash.camelcase": "^4.3.0",
+        "lodash.isequal": "^4.5.0",
+        "react": "^16.8.4",
+        "react-dom": "^16.8.4",
+        "react-testing-library": "^6.0.0",
+        "rollup-plugin-peer-deps-external": "^2.2.0"
+      },
+      "peerDependencies": {
+        "@liquid-labs/mui-extensions": "^1.0.0-prototype.0",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3",
+        "@liquid-labs/restful-paths": "^1.0.0-prototype.0",
+        "@liquid-labs/validators": "^1.0.0-prototype.2",
+        "@material-ui/core": "1.x || 3.x",
+        "@material-ui/icons": "^3.0.2",
+        "classnames": "^2.2.6",
+        "lodash.camelcase": "^4.3",
+        "lodash.isequal": "^4.5.0",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1"
+      },
+      "catalyst": {
+        "jestConfig": {
+          "testEnvironment": "jsdom"
+        }
+      },
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ],
+      "dependencies": {
+        "uninstall": "0.0.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "react-viewport-context": {
+    "package": {
+      "name": "@liquid-labs/react-viewport-context",
+      "version": "1.0.0-prototype.4",
+      "description": "A react Provider with hook to get viewport info and subscribe to changes.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "prepare": "npm run build",
+        "pretest": "TEST_TYPES=unit catalyst-scripts pretest",
+        "test": "TEST_TYPES=unit catalyst-scripts test",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/react-viewport-context.git"
+      },
+      "keywords": [
+        "react"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/react-viewport-context/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/react-viewport-context#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22",
+        "@material-ui/core": "^3.9.3",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "classnames": "^2.2.6",
+        "jss": "^10.0.0-alpha.16",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "react-testing-library": "^5.8.0"
+      },
+      "peerDependencies": {
+        "@material-ui/core": "^3.9.3",
+        "@material-ui/styles": "^3.0.0-alpha.10",
+        "jss": "^10.0.0-alpha.16",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1"
+      },
+      "catalyst": {
+        "rollupConfig": {
+          "commonjsConfig": {
+            "namedExports": {
+              "node_modules/react/index.js": [
+                "useEffect",
+                "useState"
+              ]
+            }
+          }
+        },
+        "jestConfig": {
+          "testEnvironment": "jsdom"
+        }
+      },
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "react-waiter": {
+    "package": {
+      "name": "@liquid-labs/react-waiter",
+      "version": "1.0.0-prototype.11",
+      "description": "Hook, render-component, and HOC for rendering \"loading\" messages or other actions based on one or more dynamic conditions.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/"
+      ],
+      "scripts": {
+        "prebuild": "rm -rf ./dist/* && mkdir -p ./dist",
+        "build": "catalyst-scripts build",
+        "prepare": "npm run build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "postversion": "git push && git push --tags",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "watch": "catalyst-scripts watch"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/react-waiter.git"
+      },
+      "keywords": [
+        "react"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/react-waiter/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/react-waiter#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.13",
+        "lodash.isequal": "^4.5.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "react-testing-library": "^5.8.0"
+      },
+      "peerDependencies": {
+        "lodash.isequal": "^4.5.0",
+        "react": "^16.8.1",
+        "react-dom": "^16.8.1",
+        "prop-types": "^15.7.2"
+      },
+      "catalyst": {
+        "rollupConfig": {
+          "commonjsConfig": {
+            "namedExports": {
+              "node_modules/react/index.js": [
+                "useEffect",
+                "useState"
+              ]
+            }
+          }
+        },
+        "jestConfig": {
+          "testEnvironment": "jsdom"
+        }
+      },
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "redux-followup": {
+    "package": {
+      "name": "@liquid-labs/redux-followup",
+      "version": "0.0.2",
+      "description": "Simple Redux middleware to asynchronously queue actions while processing an action.",
+      "main": "dist/index.js",
+      "files": [
+        "dist/",
+        "README.md"
+      ],
+      "scripts": {
+        "prepublishOnly": "rm -rf dist && babel ./index.js -d dist && find dist -name '*.test.js' | xargs rm",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/redux-followup-action.git"
+      },
+      "keywords": [
+        "redux",
+        "redux-middleware",
+        "middleware",
+        "queue",
+        "async"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/redux-followup/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/redux-followup#readme",
+      "devDependencies": {
+        "@babel/cli": "^7.1.0",
+        "@babel/core": "^7.1.0",
+        "@babel/preset-env": "^7.1.0"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "regex-repo": {
+    "package": {
+      "name": "@liquid-labs/regex-repo",
+      "version": "1.0.0-alpha.3",
+      "description": "Collection of JS regular expressions.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "README.md",
+        "dist/"
+      ],
+      "scripts": {
+        "start": "catalyst-scripts start",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "build": "catalyst-scripts build",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "install-clean": "rm -rf package-lock.json node_modules/ && npm install",
+        "prepare": "rm -rf dist && npm run lint && npm run build",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:Liquid-Labs/regex-repo.git"
+      },
+      "keywords": [
+        "regex",
+        "validate-data",
+        "data-validation"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/regex-repo/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/regex-repo#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.15"
+      },
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "restful-paths": {
+    "package": {
+      "name": "@liquid-labs/restful-paths",
+      "version": "1.0.0-prototype.4",
+      "description": "Specification and tools for a concrete REST-ful API and routing schema.",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "README.md",
+        "LICENSE.txt",
+        "dist/"
+      ],
+      "scripts": {
+        "start": "catalyst-scripts start",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "build": "catalyst-scripts build",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "install-clean": "rm -rf package-lock.json node_modules/ && npm install",
+        "prepare": "rm -rf dist && npm run lint && npm run build",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/Liquid-Labs/restful-paths.git"
+      },
+      "keywords": [
+        "rest"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/restful-paths/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/restful-paths#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3"
+      },
+      "dependencies": {}
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "simple-estate": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "strkit": {
+    "package": {
+      "name": "@liquid-labs/strkit",
+      "version": "1.0.0-alpha.0",
+      "description": "String utilities for go.",
+      "main": "index.js",
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/strkit.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/strkit/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/strkit#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "terror": {
+    "package": {
+      "name": "@liquid-labs/terror",
+      "version": "1.0.0-alpha.2",
+      "description": "Typed errors for go following and compatible with HTTP response codes.",
+      "scripts": {
+        "build": "catalyst-scripts build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/terror.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/terror/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/terror#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.24"
+      }
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "validators": {
+    "package": {
+      "name": "@liquid-labs/validators",
+      "version": "1.0.0-prototype.2",
+      "description": "Validators for user input (strings).",
+      "main": "dist/index.js",
+      "module": "dist/index.es.js",
+      "files": [
+        "dist/index.*",
+        "README.md"
+      ],
+      "scripts": {
+        "lint": "catalyst-scripts lint",
+        "lint-fix": "catalyst-scripts lint-fix",
+        "build": "catalyst-scripts build",
+        "start": "catalyst-scripts start",
+        "prepare": "npm run lint && npm run build",
+        "pretest": "catalyst-scripts pretest",
+        "test": "catalyst-scripts test",
+        "postversion": "git push && git push --tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Liquid-Labs/validators.git"
+      },
+      "keywords": [
+        "validation"
+      ],
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/validators/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/validators#readme",
+      "devDependencies": {
+        "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.15",
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.3"
+      },
+      "peerDependencies": {
+        "@liquid-labs/regex-repo": "^1.0.0-alpha.2"
+      },
+      "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+      ]
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "vulgar-methodology": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  },
+  "vulgar-sdlc": {
+    "package": null,
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": false,
+      "rebaseMergeAllowed": false
+    }
+  },
+  "vulgar-stack": {
+    "package": {
+      "name": "@liquid-labs/vulgar-stack",
+      "version": "0.0.1",
+      "description": "The best stack for most developers to use most of the time.",
+      "directories": {
+        "doc": "docs"
+      },
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liquid-Labs/vulgar-stack.git"
+      },
+      "author": "Zane Rockenbaugh <zane@liquid-labs.com>",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/Liquid-Labs/vulgar-stack/issues"
+      },
+      "homepage": "https://github.com/Liquid-Labs/vulgar-stack#readme"
+    },
+    "repository": {
+      "isPrivate": false,
+      "squashMergeAllowed": true,
+      "rebaseMergeAllowed": true
+    }
+  }
+}
