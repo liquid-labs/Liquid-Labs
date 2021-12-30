@@ -22,7 +22,7 @@
     "@liquid-labs/policy-devops": "^1.0.0-alpha.16"
   },
   "dependencies": {
-    "@liquid-labs/agreements-core": "^1.0.0-alpha.4",
+    "@liquid-labs/agreements-core": "^1.0.0-alpha.5",
     "@liquid-labs/orgs-model": "^1.0.0-beta.17"
   },
   "liq": {
