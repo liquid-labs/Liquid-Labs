@@ -5,6 +5,7 @@ ORG_ENTITY_DESCRIPTION='a Texas limited liability company'
 ORG_DEFAULT_STATE_JURISDICTION='Texas'
 ORG_DEFAULT_SIGNATORY_NAME='Zane Rockenbaugh'
 ORG_DEFAULT_SIGNATORY_TITLE='President'
+ORG_DEFAULT_CONTACT_EMAIL='zane@liquid-labs.com'
 ORG_ADDRESS='4419 Gillis Str, #B
 Austin, TX 78745'
 ORG_NAICS='1'
