@@ -1,0 +1,64 @@
+{
+  "auditRecords": null,
+  "dutyDescriptions": null,
+  "roles": null,
+  "rolesAccess": null,
+  "roleDuties": null,
+  "rolePolicies": null,
+  "staff": null,
+  "technologies": null,
+  "thirdPartyAccounts": null,
+  "vendors": null,
+  "_meta": {
+    "com.liquid-labs.federated-json": {
+      "mountSpecs": [
+        {
+          "path": ".auditRecords",
+          "file": "./audits/auditRecords.json"
+        },
+        {
+          "path": ".dutyDescriptions",
+          "file": "./roles/duty-descriptions.json"
+        },
+        {
+          "path": ".roles",
+          "file": "./roles/roles.json"
+        },
+        {
+          "path": ".rolesAccess",
+          "file": "./roles/access.json"
+        },
+        {
+          "path": ".roleDuties",
+          "file": "./roles/duties.json"
+        },
+        {
+          "path": ".rolePolicies",
+          "file": "./roles/role-policies.json"
+        },
+        {
+          "path": ".staff",
+          "file": "./staff.json"
+        },
+        {
+          "path": ".technologies",
+          "file": "./technologies.json"
+        },
+        {
+          "path": ".thirdPartyAccounts",
+          "file": "./third-party-accounts.json"
+        },
+        {
+          "path": ".vendors",
+          "file": "./vendors.json"
+        }
+      ]
+    }
+  },
+  "commonName": "Liquid Labs",
+  "alerts": {
+    "sources": [],
+    "reviews": []
+  },
+  "audits": []
+}
