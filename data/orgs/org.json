@@ -9,6 +9,7 @@
   "technologies": null,
   "thirdPartyAccounts": null,
   "vendors": null,
+  "settings": null,
   "_meta": {
     "com.liquid-labs.federated-json": {
       "mountSpecs": [
@@ -51,6 +52,10 @@
         {
           "path": ".vendors",
           "file": "./vendors.json"
+        },
+        {
+          "path": ".settings",
+          "file": "./settings.yaml"
         }
       ]
     }

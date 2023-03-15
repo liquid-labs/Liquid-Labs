@@ -5,3 +5,11 @@ s:
   KEY: liquid-labs
   COMMON_NAME: Liquid Labs
   LEGAL_NAME: Liquid Labs, LLC
+core:
+  github:
+    ORG_NAME: liquid-labs
+  org:
+    KEY: liquid-labs
+    COMMON_NAME: Liquid Labs
+    LEGAL_NAME: Liquid Labs, LLC
+  
