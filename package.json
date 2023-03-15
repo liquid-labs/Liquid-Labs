@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@liquid-labs/agreements-core": "^1.0.0-alpha.5",
+    "@liquid-labs/agreements-private-loans": "file:.yalc/@liquid-labs/agreements-private-loans",
     "@liquid-labs/orgs-model": "^1.0.0-beta.17"
   },
   "liq": {
