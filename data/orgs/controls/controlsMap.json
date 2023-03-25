@@ -1,0 +1,259 @@
+{
+  "project-create-controls": {
+    "liquid-labs/policy-projects-best-practices/project-create-controls": {
+      "id": "liquid-labs/policy-projects-best-practices/project-create-controls",
+      "controls": [
+        {
+          "name": "project-uses-database-queries",
+          "description": "Projects making database queries are subject to additional requirements.",
+          "qeuestions": [
+            {
+              "prompt": "Does the project make any queries to a database?",
+              "parameter": "PROJECT_USES_DATABASE_QUERIES",
+              "paramType": "boolean"
+            }
+          ],
+          "supports": [
+            "3404EDD0-4286-40F9-923B-1605872A526E"
+          ]
+        }
+      ]
+    }
+  },
+  "project-release-controls": {
+    "liquid-labs/policy-projects-best-practices/project-release-controls": {
+      "id": "liquid-labs/policy-projects-best-practices/project-release-controls",
+      "controls": [
+        {
+          "name": "release-unit-tests",
+          "description": "Rreleases is unit tested according to policy.",
+          "questions": [
+            {
+              "prompt": "Provide link to the unit <em>test report<rst> covering this release:",
+              "parameter": "RELEASE_UNIT_TEST_URL",
+              "paramType": "boolean"
+            },
+            {
+              "prompt": "Are there any <em>QA exceptions<rst> which need to be addressed?",
+              "parameter": "RELEASE_HAS_QA_EXCEPTIONS",
+              "paramType": "boolean"
+            },
+            {
+              "condition": "RELEASE_HAS_QA_EXCEPTIONS",
+              "prompt": "Provide a <em>business justification<rst> for allowing QA exceptions:",
+              "parameter": "RELEASE_QA_EXCEPTIONS_JUSTIFICATION",
+              "paramType": "string"
+            },
+            {
+              "condition": "RELEASE_HAS_QA_EXCEPTIONS",
+              "prompt": "Provide an <em>analysis<rst> of the possible security, stability, and general risk entailed:",
+              "parameter": "RELEASE_QA_EXCEPTIONS_RISK_ANAYSIS",
+              "paramType": "string"
+            }
+          ],
+          "mappings": [
+            {
+              "maps": [
+                {
+                  "parameter": "RELEASE_UNIT_TEST_REQS_MET",
+                  "source": "RELEASE_UNIT_TEST_URL && (!RELEASE_HAS_QA_EXCEPTIONS || (RELEASE_QA_EXCEPTIONS_JUSTIFICATION && RELEASE_QA_EXCEPTIONS_RISK_ANAYSIS))"
+                }
+              ]
+            }
+          ],
+          "supports": []
+        },
+        {
+          "name": "release-changelog",
+          "description": "The <code>CHANGELOG.md<rst> is updated with each release (as required).",
+          "questions": [
+            {
+              "condition": "PROJECT_REQUIRES_CHANGELOG",
+              "prompt": "Give a <em>link<rst> to the <code>CHANGELOG.md<rst> entry covering this release (if any; hit <enter> for none):",
+              "parameter": "RELEASE_CHANGELOG_ENTRY_URL",
+              "paramType": "string"
+            },
+            {
+              "condition": "PROJECT_REQUIRES_CHANGELOG && !RELEASE_CHANGELOG_ENTRY_URL",
+              "prompt": "If this is an emergency release, please provide a URL to a <em>ticket to update<rst> the <code>CHANGELOG.md<rst>?",
+              "parameter": "RELEASE_CHANGELOG_UPDATE_TICKET",
+              "paramType": "boolean"
+            }
+          ],
+          "mappings": [
+            {
+              "maps": [
+                {
+                  "parameter": "RELEASE_CHANGELOG_REQS_MET",
+                  "source": "!PROJECT_REQUIRES_CHANGELOG || RELEASE_CHANGELOG_ENTRY_URL || RELEASE_CHANGELOG_UPDATE_TICKET"
+                }
+              ]
+            }
+          ],
+          "supports": [
+            "7236AAA6-D232-4865-805E-790CD56F1811"
+          ]
+        }
+      ]
+    }
+  },
+  "work-submit-controls": {
+    "liquid-labs/policy-projects-best-practices/work-submit-controls": {
+      "id": "liquid-labs/policy-projects-best-practices/work-submit-controls",
+      "controls": [
+        {
+          "name": "submit-implementation",
+          "description": "Changes are consistent with and limited to the change ticket.",
+          "questions": [
+            {
+              "prompt": "Do the changes <em>implement all concrete TODOs<rst> in the change ticket?",
+              "parameter": "CHANGES_IMPLEMENT_ALL_TODOS",
+              "paramType": "boolean",
+              "requireExact": true
+            },
+            {
+              "prompt": "Are there other changes not described in the original work description?",
+              "parameter": "CHANGES_HAS_ADDITIONAL_CHANGES",
+              "paramType": "boolean"
+            },
+            {
+              "condition": "CHANGES_HAS_ADDITIONAL_CHANGES",
+              "prompt": "Are all <em>additional changes non-behavior modifying<rst>? Allowed changes include: inline documentation, improving names, additional testing, updating existing dependencies, file organization and naming, and simple optimizations.",
+              "parameter": "CHANGES_ADDITIONAL_CHANGES_PERMITTED",
+              "paramType": "boolean",
+              "elseValue": true,
+              "requireExact": true
+            },
+            {
+              "condition": "CHANGES_HAS_ADDITIONAL_CHANGES",
+              "prompt": "Have the <em>additional changes been documented<rst> in the change ticket description under the <em>Additional changes<rst> section?",
+              "parameter": "CHANGES_ADDITIONAL_CHANGES_DOCUMENTED",
+              "paramType": "boolean",
+              "elseValue": true,
+              "requireExact": true
+            }
+          ],
+          "mappings": [
+            {
+              "maps": [
+                {
+                  "description": "All ticket requierements met:",
+                  "parameter": "CHANGES_TICKET_REQS_MET",
+                  "paramType": "boolean",
+                  "source": "CHANGES_IMPLEMENT_ALL_TODOS && CHANGES_ADDITIONAL_CHANGES_PERMITTED && CHANGES_ADDITIONAL_CHANGES_DOCUMENTED",
+                  "requireExact": true
+                }
+              ]
+            }
+          ],
+          "supports": []
+        },
+        {
+          "name": "submit-qa-tests",
+          "description": "Changes are unit tested according to policy.",
+          "questions": [
+            {
+              "prompt": "Provide link to the <em>unit test report<rst> covering the submission or a detailed description where it can be found:",
+              "parameter": "CHANGES_UNIT_TEST_REPORT_URL",
+              "requireTruthy": true,
+              "alwaysInclude": true
+            },
+            {
+              "prompt": "Are there any <em>QA exceptions<rst> which need to be addressed?",
+              "parameter": "CHANGES_HAS_QA_EXCEPTIONS",
+              "paramType": "boolean"
+            },
+            {
+              "condition": "CHANGES_HAS_QA_EXCEPTIONS",
+              "prompt": "Have the QA exceptions and an accompanying risk analysis already been documented in the pull-request ticket?",
+              "parameter": "CHANGES_QA_EXCEPTIONS_ARE_DOCUMENTED",
+              "paramType": "boolean",
+              "elseValue": true
+            },
+            {
+              "condition": "CHANGES_HAS_QA_EXCEPTIONS && !CHANGES_QA_EXCEPTIONS_ARE_DOCUMENTED",
+              "prompt": "Provide a <em>business justification<rst> for allowing QA exceptions:",
+              "parameter": "CHANGES_QA_EXCEPTIONS_JUSTIFICATION",
+              "paramType": "string",
+              "elseValue": ""
+            },
+            {
+              "condition": "CHANGES_HAS_QA_EXCEPTIONS && !CHANGES_QA_EXCEPTIONS_ARE_DOCUMENTED",
+              "prompt": "Provide an <em>analysis<rst> of the possible security, stability, and general risk entailed:",
+              "parameter": "CHANGES_QA_EXCEPTIONS_RISK_ANAYSIS",
+              "paramType": "string",
+              "elseValue": ""
+            },
+            {
+              "prompt": "Provide link to the <em>lint report<rst> the submission or a detailed description where it can be found:",
+              "parameter": "CHANGES_LINT_REPORT_URL",
+              "requireTruthy": true,
+              "alwaysInclude": true
+            }
+          ],
+          "mappings": [
+            {
+              "maps": [
+                {
+                  "description": "All unit test requirements are met and any exceptions are documented and analyzide:",
+                  "parameter": "CANGES_UNIT_TEST_REQS_MET",
+                  "paramType": "boolean",
+                  "source": "CHANGES_UNIT_TEST_REPORT_URL && (!CHANGES_HAS_QA_EXCEPTIONS || (CHANGES_QA_EXCEPTIONS_JUSTIFICATION && CHANGES_QA_EXCEPTIONS_RISK_ANAYSIS))",
+                  "requireExact": true
+                }
+              ]
+            }
+          ],
+          "supports": [
+            "E51DE60E-FC61-47C3-8D3C-584F1DABE90E"
+          ]
+        },
+        {
+          "name": "submit-third-party-services",
+          "description": "Changes follow security policies regarding third-party services and queries.",
+          "questions": [
+            {
+              "prompt": "Do the changes add or involve connections, authentication, or queries to a database or any third-party service?",
+              "parameter": "CHANGES_THIRD_PARTY_SERVICES_MODIFIED",
+              "paramType": "boolean"
+            },
+            {
+              "condition": "CHANGES_THIRD_PARTY_SERVICES_MODIFIED",
+              "prompt": "Have any <em>database calls<rst> been added or modified?",
+              "parameter": "CHANGES_DB_CALLS_MODIFIED",
+              "paramType": "boolean",
+              "elseValue": false,
+              "requireExact": false
+            },
+            {
+              "condition": "CHANGES_DB_CALLS_MODIFIED",
+              "prompt": "Are all <em>database queries escaped<rst> using industry standard libraries?",
+              "parameter": "CHANGES_DB_QUERIES_ESCAPED",
+              "paramType": "boolean",
+              "elseValue": true,
+              "requireExact": false
+            }
+          ],
+          "supports": [
+            "76816A9C-285F-4D6A-B9F0-A95FD47F41D4"
+          ]
+        },
+        {
+          "name": "submit-debug-removed",
+          "description": "All debug, hard-coded test data, and hard-coded authentication data has been removed.",
+          "questions": [
+            {
+              "prompt": "Has all debug, hard coded test data, and hard coded authentication data been removed?",
+              "parameter": "CHANGES_DEBUG_REMOVED",
+              "paramType": "boolean",
+              "requireExact": true
+            }
+          ],
+          "supports": [
+            "8FEB945D-C8BE-4411-8080-3961835F9B1A"
+          ]
+        }
+      ]
+    }
+  }
+}

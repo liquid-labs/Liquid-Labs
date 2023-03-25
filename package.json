@@ -31,5 +31,8 @@
     "changeControl": {
       "type": "org"
     }
+  },
+  "devDependencies": {
+    "@liquid-labs/policy-projects-best-pracitces": "^1.0.0-alpha.1"
   }
 }

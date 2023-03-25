@@ -56,6 +56,10 @@
         {
           "path": ".settings",
           "file": "./settings.yaml"
+        },
+        {
+          "path": ".controlsMap",
+          "file": "./controls/controlsMap.json"
         }
       ]
     }
@@ -65,5 +69,6 @@
     "sources": [],
     "reviews": []
   },
-  "audits": []
+  "audits": [],
+  "controlsMap": null
 }
