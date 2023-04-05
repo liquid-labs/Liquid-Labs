@@ -12,6 +12,10 @@ core:
     KEY: liquid-labs
     COMMON_NAME: Liquid Labs
     LEGAL_NAME: Liquid Labs, LLC
+github:
+  ORG_NAME: liquid-labs
+npm:
+  ORG_NAME: liquid-labs
 projects:
   releases:
     PUBLISH_FROM: main-branch
