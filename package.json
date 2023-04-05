@@ -33,6 +33,6 @@
     }
   },
   "devDependencies": {
-    "@liquid-labs/policy-projects-best-pracitces": "^1.0.0-alpha.1"
+    "@liquid-labs/policy-projects-best-pracitces": "^1.0.0-alpha.2"
   }
 }

@@ -6,7 +6,7 @@
         {
           "name": "project-uses-database-queries",
           "description": "Projects making database queries are subject to additional requirements.",
-          "qeuestions": [
+          "actions": [
             {
               "prompt": "Does the project make any queries to a database?",
               "parameter": "PROJECT_USES_DATABASE_QUERIES",
@@ -27,7 +27,7 @@
         {
           "name": "release-unit-tests",
           "description": "Rreleases is unit tested according to policy.",
-          "questions": [
+          "actions": [
             {
               "prompt": "Provide link to the unit <em>test report<rst> covering this release:",
               "parameter": "RELEASE_UNIT_TEST_URL",
@@ -49,9 +49,7 @@
               "prompt": "Provide an <em>analysis<rst> of the possible security, stability, and general risk entailed:",
               "parameter": "RELEASE_QA_EXCEPTIONS_RISK_ANAYSIS",
               "paramType": "string"
-            }
-          ],
-          "mappings": [
+            },
             {
               "maps": [
                 {
@@ -66,7 +64,7 @@
         {
           "name": "release-changelog",
           "description": "The <code>CHANGELOG.md<rst> is updated with each release (as required).",
-          "questions": [
+          "actions": [
             {
               "condition": "PROJECT_REQUIRES_CHANGELOG",
               "prompt": "Give a <em>link<rst> to the <code>CHANGELOG.md<rst> entry covering this release (if any; hit <enter> for none):",
@@ -78,9 +76,7 @@
               "prompt": "If this is an emergency release, please provide a URL to a <em>ticket to update<rst> the <code>CHANGELOG.md<rst>?",
               "parameter": "RELEASE_CHANGELOG_UPDATE_TICKET",
               "paramType": "boolean"
-            }
-          ],
-          "mappings": [
+            },
             {
               "maps": [
                 {
@@ -104,7 +100,7 @@
         {
           "name": "submit-implementation",
           "description": "Changes are consistent with and limited to the change ticket.",
-          "questions": [
+          "actions": [
             {
               "prompt": "Do the changes <em>implement all concrete TODOs<rst> in the change ticket?",
               "parameter": "CHANGES_IMPLEMENT_ALL_TODOS",
@@ -131,9 +127,7 @@
               "paramType": "boolean",
               "elseValue": true,
               "requireExact": true
-            }
-          ],
-          "mappings": [
+            },
             {
               "maps": [
                 {
@@ -151,7 +145,7 @@
         {
           "name": "submit-qa-tests",
           "description": "Changes are unit tested according to policy.",
-          "questions": [
+          "actions": [
             {
               "prompt": "Provide link to the <em>unit test report<rst> covering the submission or a detailed description where it can be found:",
               "parameter": "CHANGES_UNIT_TEST_REPORT_URL",
@@ -189,9 +183,7 @@
               "parameter": "CHANGES_LINT_REPORT_URL",
               "requireTruthy": true,
               "alwaysInclude": true
-            }
-          ],
-          "mappings": [
+            },
             {
               "maps": [
                 {
@@ -211,7 +203,7 @@
         {
           "name": "submit-third-party-services",
           "description": "Changes follow security policies regarding third-party services and queries.",
-          "questions": [
+          "actions": [
             {
               "prompt": "Do the changes add or involve connections, authentication, or queries to a database or any third-party service?",
               "parameter": "CHANGES_THIRD_PARTY_SERVICES_MODIFIED",
@@ -241,7 +233,7 @@
         {
           "name": "submit-debug-removed",
           "description": "All debug, hard-coded test data, and hard-coded authentication data has been removed.",
-          "questions": [
+          "actions": [
             {
               "prompt": "Has all debug, hard coded test data, and hard coded authentication data been removed?",
               "parameter": "CHANGES_DEBUG_REMOVED",
