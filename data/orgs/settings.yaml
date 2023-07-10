@@ -1,21 +1,30 @@
-ORG_ID: liquid-labs
-ORG_COMMON_NAME: Liquid Labs
-ORG_LEGAL_NAME: Liquid Labs, LLC
-s:
+org:
   KEY: liquid-labs
   COMMON_NAME: Liquid Labs
   LEGAL_NAME: Liquid Labs, LLC
-core:
-  github:
-    ORG_NAME: liquid-labs
-  org:
-    KEY: liquid-labs
-    COMMON_NAME: Liquid Labs
-    LEGAL_NAME: Liquid Labs, LLC
+  POLICY_DATA_REPO: liquid-labs/liquid-labs
+  POLICY_REPO: liquid-labs/liquid-labs
 github:
   ORG_NAME: liquid-labs
 npm:
   ORG_NAME: liquid-labs
+
+policy:
+  change_control:
+    DEVELOPERS_SELF_ASSIGN: true # set based on question that maps
+
+    HAS_PRODUCT_STRATEGY_COMMITTEE: false
+    COMBINED_PROJECT_PRODUCT_MANAGER: true
+    PRODUCT_MANAGEMENT_BY: '<role>Project Manager</role>' # mapped from question; can be 'Project Manager' (if combined projet+product manager), 'Product Manager', 'Product Management Team', or 'Product Manager or Product Management Team'
+
+    PRIMARY_ISSUE_LABELS: [ bug, enhancement, task ]
+    WIP_ISSUE_LABELS: [ 'needs spec' ]
+  documentation:
+    # this is a temporary workaround
+    GENERATE_AUDIT_REPORT: false
+    GENERATE_CHD_ACCESS_REPORT: false
+    GENERATE_OPEN_PORTS_REPORT: false
+    GENERATE_STAFF_REPORT: false
 projects:
   releases:
     PUBLISH_FROM: main-branch
