@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@liquid-labs/policy-projects-best-practices": "file:../../../policy-projects-best-practices"
+  }
+}
