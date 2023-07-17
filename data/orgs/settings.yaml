@@ -11,6 +11,7 @@ npm:
 
 policy:
   change_control:
+    ALLOWS_ADDITIONAL_CHANGES: true
     DEVELOPERS_SELF_ASSIGN: true # set based on question that maps
 
     HAS_PRODUCT_STRATEGY_COMMITTEE: false
@@ -28,3 +29,5 @@ policy:
 projects:
   releases:
     PUBLISH_FROM: main-branch
+tools:
+  TICKET_MANAGEMENT_SYSTEMS: [ GitHub Issues ]
