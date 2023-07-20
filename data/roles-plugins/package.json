@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@liquid-labs/roles-core": "file:../../../roles-core"
+  }
+}
