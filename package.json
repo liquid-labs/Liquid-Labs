@@ -3,9 +3,10 @@
   "version": "1.0.0-beta.1",
   "description": "Liquid Labs public info.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "make test",
     "build": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile --silent",
-    "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && make -f .build/main.makefile --silent"
+    "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && make -f .build/main.makefile --silent",
+    "qa": "make qa"
   },
   "repository": {
     "type": "git",
