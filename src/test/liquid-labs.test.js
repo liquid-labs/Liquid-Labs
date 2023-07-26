@@ -6,8 +6,8 @@ import { tryExec } from '@liquid-labs/shell-toolkit'
 
 const logs = []
 const testOptions = {
-  skipCorePlugins     : true,
-  reporter            : new Reporter({ silent : true })
+  skipCorePlugins : true,
+  reporter        : new Reporter({ silent : true })
 }
 
 testOptions.reporter.log = jest.fn((msg) => { logs.push(msg) })
@@ -18,18 +18,18 @@ describe('Liquid Labs orgs model', () => {
   let app, cache, model
 
   beforeAll(async() => {
-    const rolesPluginPath = tryExec(`npm explore @liquid-labs/liq-roles -- pwd`).stdout.trim()
+    const rolesPluginPath = tryExec('npm explore @liquid-labs/liq-roles -- pwd').stdout.trim()
 
     model = initModel(testOptions);
     ({ app, cache } = await appInit(Object.assign(
       { model },
       testOptions,
-      { pluginDirs : [rolesPluginPath], noAPIUpdate: true }
+      { pluginDirs : [rolesPluginPath], noAPIUpdate : true }
     )))
     console.log('AFTER INIT') // DEBUG
     // await new Promise(resolve => setTimeout(resolve, 250))
   })
-  afterEach(async() => { // put the original staff.json back in place
+  afterAll(async() => { // put the original staff.json back in place
     cache.release()
   })
 
