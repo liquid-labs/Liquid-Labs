@@ -1,4 +1,6 @@
+/qa
 /node_modules
-/.yalc
 /yalc.lock
-/.build
+/.yalc
+/dist
+/test-staging

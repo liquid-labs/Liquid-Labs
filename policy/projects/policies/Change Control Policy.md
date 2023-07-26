@@ -18,12 +18,13 @@ Establish the Company's 'change control policy' as relates to operations. See [C
   * changes to Company Policy.
 </span> *(PCI DSS v3.2.1 ref 6.4)*
 
-### Ticket prioritization and assignement
+### Ticket prioritization and assignment
 
 - <span id="EC18AA2E-0D59-4485-BB40-A2C99A3E9E95">When a ticket is made available, the editor is positively asserting the ticket—to the best of their knowledge—complies with all applicable company standards. A ticket is considered 'available' if it has a primary type label ('bug', 'enhancement', 'task') and no 'work in progress' labels ('needs spec').</span>
-- <span id="362CB04E-FBA8-4EF2-B98B-D1898176F570">Each project is assigned a designated Project Manager who shall determines the strategic value of and assign priorities to new features, optimizations, bugs, and other product changes.</span>
+- <span id="362CB04E-FBA8-4EF2-B98B-D1898176F570">Each project is assigned a designated <role>Product Manager</role> and <role>Project Manager</role>.</span>
+- <span id="BC3C93F7-A747-4D1C-8588-482276596DA9">A project's <role>Product Manager</role> shall determine the strategic value and prioritize new features and other product changes.</span>
 - <span id="D3681778-DDA2-4989-85C2-E3FE9E8C0BC0"><role>Project Manager</role>s determine "must do" maintenance activities for each development cycle. The <role>Project Manager</role> will create and prioritize such [maintenance tasks](#maintenance-tasks-guidelines) at their discretion.</span>
-- <span id="FA631FC5-EB3F-4EB4-959C-2339BB25F473">The <role>Project Manager</role> is responsible for final ordering of tasks and assignments in each development cycle.</span> *(PCI DSS v3.2.1 ref 6.4.5.a)*
+- <span id="81DCD62B-2AE6-459E-B747-D8736A44D425">For each project, the <role>Project Manager</role> will determine final ticket priortization for each development cycle based on the strategic directives set by the <role>Product Manager</role>, technical needs, and logical ordering.</span> *(PCI DSS v3.2.1 ref 6.4.5.a)*
 - <span id="BACCA3F0-6CF8-49FF-BAAC-42F9D94B2AAA">The <role>Project Manager</role> may formally request clarification, additional details, and other input from stakeholders as needed for the purpose of scheduling and prioritizing tasks.</span>
 - <span id="833D7BF6-059A-45E6-8B5F-66AEBDED4A4A">Developers typically self-assign available tickets from the available pool of issues based on their own expertise and the priority and nature of the available issues.</span> *(PCI DSS v3.2.1 ref 6.4.5.a)*
 - <span id="F2DF6F2D-ED73-48F7-8A5C-FE86972ACC2F">When a reviewer approves a PR, they positively assert that the PR and all related Tasks comply, to the best of their knowledge, with Company standards.</span>

@@ -3,9 +3,10 @@
   "version": "1.0.0-beta.1",
   "description": "Liquid Labs public info.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "make test",
     "build": "$(npm bin)/liq-gen-make > .build/main.makefile && make -f .build/main.makefile --silent",
-    "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && make -f .build/main.makefile --silent"
+    "build:refresh": "rm -rf .build policy && $(npm bin)/liq-init-docs run && make -f .build/main.makefile --silent",
+    "qa": "make qa"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,12 @@
     "changeControl": {
       "type": "org"
     }
+  },
+  "devDependencies": {
+    "@liquid-labs/catalyst-scripts-node-project": "^1.0.0-alpha.20",
+    "@liquid-labs/liq-core": "^1.0.0-alpha.18",
+    "@liquid-labs/liq-roles": "^1.0.0-alpha.4",
+    "@liquid-labs/shell-toolkit": "^1.0.0-alpha.6",
+    "supertest": "^6.3.3"
   }
 }

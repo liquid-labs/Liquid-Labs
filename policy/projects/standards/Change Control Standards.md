@@ -10,7 +10,7 @@ Collectively, these standards, along with the rest of the [Change Control Framew
 
 ### Policy management
 
-- <span id="A3F7A02F-63B1-4B2F-85F6-4C7013369E77">The <role>Chief Technical Officer</role> is responsible for maintaining the [Change Control Framework](../Change%20Control%20Framework.md) and with keeping it up to date with best practices and company practice.</span>
+- <span id="A3F7A02F-63B1-4B2F-85F6-4C7013369E77">The <role>Policy Manager</role> is responsible for maintaining the [Change Control Framework](../Change%20Control%20Framework.md) and with keeping it up to date with best practices and company practice.</span>
 
 ### Scope
 
