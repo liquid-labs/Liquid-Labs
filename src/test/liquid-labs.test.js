@@ -26,7 +26,6 @@ describe('Liquid Labs orgs model', () => {
       testOptions,
       { pluginDirs : [rolesPluginPath], noAPIUpdate : true }
     )))
-    console.log('AFTER INIT') // DEBUG
     // await new Promise(resolve => setTimeout(resolve, 250))
   })
   afterAll(async() => { // put the original staff.json back in place
