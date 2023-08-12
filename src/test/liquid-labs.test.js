@@ -39,6 +39,6 @@ describe('Liquid Labs orgs model', () => {
 
     expect(status).toBe(200)
     expect(headers['content-type']).toMatch(/application\/json/)
-    expect(body).toHaveLength(19)
+    expect(body).toHaveLength(18)
   })
 })
